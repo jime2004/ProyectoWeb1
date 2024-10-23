@@ -175,17 +175,12 @@ nav {
 
 .subtitulo::before {
     content: '';
-    /* Crea el pseudoelemento */
     position: absolute;
     left: 0;
-    /* Alinea la línea al borde izquierdo del subtítulo */
     top: 0;
     height: 100%;
-    /* La línea tendrá la misma altura que el subtítulo */
     width: 6px;
-    /* Grosor de la línea */
     background-color: var(--verdeClaro);
-    /* Color de la línea */
 }
 
 .texto2 {
@@ -210,9 +205,7 @@ nav {
 .text-section {
     font-family: 'Poppins', sans-serif;
     color: var(--gris);
-    /* Cambia el color del texto */
     font-size: 15px;
-    /* Cambia el tamaño de la fuente */
 }
 
 .btn {
@@ -222,25 +215,20 @@ nav {
 
 .btn:hover {
     background-color: var(--verdeClaro) !important;
-    /* Color de fondo al pasar el mouse */
     color: white;
-    /* Color del texto al pasar el mouse */
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus,
 .contact-form select:focus {
     border-color: var(--verdeClaro);
-    /* Cambia este color al que desees */
     box-shadow: 0 0 6px rgba(110, 217, 135, 0.5);
-    /* Agrega un efecto de sombra (opcional) */
 }
 
 input.form-control,
 select.form-select,
 textarea.form-control {
     font-size: 15px;
-    /* Cambia este valor al tamaño de fuente que desees */
 }
 
 /* Services section */
@@ -263,9 +251,7 @@ textarea.form-control {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0;
-    /* Sin espacio entre columnas */
     border: 1px solid #e0e0e0;
-    /* Borde exterior de la cuadrícula */
 }
 
 .service-box {
@@ -274,9 +260,7 @@ textarea.form-control {
     text-align: center;
     transition: transform 0.3s ease, background-color 0.3s ease;
     margin-bottom: 15px;
-    /* Espacio entre filas */
     border: 1px solid #e0e0e0;
-    /* Añade borde */
 }
 
 .service-box img {
@@ -302,37 +286,28 @@ textarea.form-control {
 .service-box:nth-child(-n+3) {
     border-top: none;
     border-bottom: none;
-    /* Quita borde superior en la primera fila */
 }
 
 /* Efectos de animación al pasar el cursor */
 .service-box:hover {
     transform: scale(1.05);
-    /* Aumenta ligeramente el tamaño */
     background-color: #e0e0e0;
-    /* Oscurece el fondo */
 }
 
 .service-box:hover img {
     transform: scale(1.1);
-    /* Agranda un poco el ícono */
 }
 
 .service-box a {
     text-decoration: none;
-    /* Elimina el subrayado del texto */
     color: inherit;
-    /* Mantiene el color original del texto */
 }
 
 /* Evitar cambios en el hover */
 .service-box a:hover {
     color: inherit;
-    /* Evita que el color cambie al pasar el ratón */
     text-decoration: none;
-    /* Asegura que no se subraye en hover */
     opacity: 1;
-    /* Evita que se haga más oscuro */
 }
 
 
@@ -340,85 +315,59 @@ textarea.form-control {
 /* Estilos del footer */
 footer {
     background-color: var(--verdeOscuro);
-    /* Color de fondo */
     color: white;
-    /* Color de texto */
     padding: 20px;
-    /* Espaciado interno */
     display: flex;
-    /* Usar flexbox para organizar elementos */
     align-items: center;
-    /* Centrar verticalmente */
     justify-content: space-between;
-    /* Espacio entre elementos */
     flex-wrap: wrap;
-    /* Permitir que los elementos se ajusten */
     padding-left: 200px;
-    /* Espaciado a la izquierda */
     padding-right: 200px;
-    /* Espaciado a la derecha */
     margin-top: 6rem;
 }
 
 .footer-logo {
     width: 170px;
-    /* Ajusta el ancho del logo según sea necesario */
     margin-right: 10px;
-    /* Espaciado a la derecha del logo */
 }
 
 .contact-info {
     display: flex;
     flex-direction: column;
-    /* Alinear elementos verticalmente */
     margin-right: 10px;
-    /* Espaciado a la derecha de la info de contacto */
 }
 
 .contact-info p {
     margin: 5px 0;
-    /* Espaciado vertical entre líneas */
     font-size: 18px;
-    /* Tamaño de fuente para la información */
     font-weight: 500;
-    font-family: "Poppins";
+    font-family: "Poppins", Arial, sans-serif;
 }
 
 .contact-info i {
     margin-right: 15px;
-    /* Espaciado a la derecha de los iconos */
 }
 
 .social-icons {
     display: flex;
-    /* Usar flexbox para las redes sociales */
     flex-direction: column;
-    /* Alinear elementos verticalmente */
     align-items: center;
-    /* Centrar horizontalmente */
     gap: 1px;
-    /* Espacio entre el texto y los iconos */
 }
 
 .social-icons p {
     margin: 0;
-    /* Sin margen para el texto de redes sociales */
     font-size: 24px;
-    /* Tamaño de fuente para el texto de redes */
     font-weight: 700;
 }
 
 .social-icons a {
     color: white;
-    /* Color de los iconos */
     font-size: 27px;
-    /* Tamaño de los iconos */
     text-decoration: none;
-    /* Sin subrayado */
     margin: 0 7px;
 }
 
 .social-icons a:hover {
     color: #48924b;
-    /* Cambia el color al pasar el mouse */
 }

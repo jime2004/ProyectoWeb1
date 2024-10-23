@@ -13,7 +13,7 @@
 body,
 html {
   margin-top: 90px;
-  font-family: "Poppins";
+  font-family: "Poppins", Arial, sans-serif;
 }
 
 header {

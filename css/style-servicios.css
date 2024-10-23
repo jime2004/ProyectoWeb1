@@ -13,7 +13,7 @@
 body,
 html {
   margin-top: 90px;
-  font-family: "Poppins";
+  font-family: "Poppins", Arial, sans-serif;
 }
 
 header {
@@ -83,7 +83,6 @@ nav ul li a::after {
 
 nav ul li a:hover::after {
   transform: scaleX(1);
-  /* El subrayado se expande al hacer hover */
 }
 
 
