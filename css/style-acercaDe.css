@@ -1,0 +1,315 @@
+:root {
+  --blanco: #ffffff;
+  --verdeOscuro: #8fa96d;
+  --verdeClaro: #D4DDB1;
+  --cafe: #7A6448;
+  --beige: #F9F4E3;
+  --cafeClaro: #CDB28A;
+  --negro: #000000;
+  --gris: #333;
+}
+
+body,
+html {
+  margin-top: 88px;
+  padding: 0;
+  font-family: "Poppins";
+  padding-top: 1px;
+
+}
+
+header {
+  background-color: var(--blanco);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 16px 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo img {
+  width: 190px;
+}
+
+nav {
+  flex-grow: 2;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  padding: 10px 5px;
+}
+
+nav ul li a:hover {
+  color: var(--verdeOscuro);
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--cafeClaro);
+  left: 0;
+  bottom: -5px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+nav {
+  flex-grow: 2;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.text-section {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  margin-top: 5rem;
+  text-align: center;
+  background-color:var(--blanco);
+  border-radius: 10px;
+}
+
+.text-section h2 {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--gris);
+}
+
+.about {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 100px;
+  flex-wrap: wrap;
+}
+
+.about-section {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 430px;
+  height: 320px;
+  overflow: hidden;
+  transition: height 0.5s ease, width 0.5s ease, padding 0.5s ease;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.about-section:hover {
+  width: 40%;
+  height: auto;
+  padding-bottom: 20px;
+}
+
+.about-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #01204E;
+  margin-bottom: 20px;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.user-info {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+  display: none;
+}
+
+.about-section:hover .user-info {
+  display: block;
+  margin-top: 20px;
+}
+
+strong {
+  color: #01204E;
+}
+
+p {
+  color: #333;
+  line-height: 1.6;
+}
+
+
+/* Banner Section */
+.banner {
+  width: 100vw;
+  background-image: url('../img/cancun.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.banner h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+
+.subtitulo {
+  position: relative;
+  padding-left: 20px;
+  font-size: 2rem;
+}
+
+.subtitulo::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 6px;
+  background-color: var(--verdeClaro);
+}
+
+.section-paragraph {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-top: 2rem;
+}
+
+
+
+/* Estilos del footer */
+footer {
+  background-color: var(--verdeOscuro);
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 200px;
+  padding-right: 200px;
+  margin-top: 6rem;
+}
+
+.footer-logo {
+  width: 170px;
+  margin-right: 10px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.contact-info i {
+  margin-right: 15px;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+}
+
+.social-icons p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 27px;
+  text-decoration: none;
+  margin: 0 7px;
+}
+
+.social-icons a:hover {
+  color: #48924b;
+}

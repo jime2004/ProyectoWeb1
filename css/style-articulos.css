@@ -1,0 +1,309 @@
+:root {
+    --blanco: #ffffff;
+    --verdeOscuro: #8fa96d; 
+    --verdeClaro: #D4DDB1;
+    --cafe: #7A6448; 
+    --beige: #F9F4E3;
+    --cafeClaro: #CDB28A;
+    --negro: #000000;
+    --gris:#333;
+}
+
+header {
+  background-color: var(--blanco);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 16px 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo img {
+  width: 190px;
+}
+
+nav {
+  flex-grow: 2; /* Esto permite que el menú tome más espacio */
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  position: relative; 
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  padding: 10px 5px;
+}
+
+nav ul li a:hover {
+  color: var(--verdeOscuro);
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 100%; /* Ancho del subrayado */
+  height: 2px; /* Grosor del subrayado */
+  background-color: var(--cafeClaro); /* Color del subrayado */
+  left: 0;
+  bottom: -5px; /* Espacio entre el texto y el subrayado */
+  transform: scaleX(0); /* Comienza oculto */
+  transition: transform 0.3s ease; /* Transición suave */
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1); /* El subrayado se expande al hacer hover */
+}
+
+nav {
+  flex-grow: 2;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+  }
+  nav ul {
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
+  }
+}
+
+body, html {
+    margin-top: 90px;
+    padding: 0;
+    font-family: "Poppins";
+    padding-top: 1px;
+    
+}
+
+main {
+    font-family: "Poppins", Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 150px; /* Añadir un poco de padding alrededor del contenido */
+    background-color: #f4f4f4;
+    padding-top: 10px;
+}
+
+.fecha-container {
+  display: flex;
+  align-items: center; /* Centra verticalmente el contenido */
+  background-color: #f9f9f9; /* Fondo ligero */
+  padding: 10px 15px; /* Espaciado interno */
+  border-radius: 5px; /* Esquinas redondeadas */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  font-family: "Poppins", sans-serif; /* Fuente del texto */
+  color: #333; /* Color del texto */
+}
+
+.fecha-container i {
+  font-size: 1.5rem; /* Tamaño del ícono */
+  margin-right: 10px; /* Espacio entre el ícono y la fecha */
+  color: var(--verdeOscuro); /* Color del ícono */
+}
+
+.fecha {
+  font-size: 1.2rem; /* Tamaño del texto de la fecha */
+}
+
+
+.article-image {
+  width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+  max-width: 1218px; /* Establece un ancho máximo para pantallas grandes */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 8px;
+  margin: 10px 0; /* Margen superior e inferior para separar imágenes del texto */
+}
+
+article h2 {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--gris);
+}
+
+
+
+/* Banner Section */
+.banner {
+    width: 100vw; /* 100% del ancho del viewport */
+    background-image: url('../img/ThailandCarousel.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 40vh; /* Controla la altura del banner */
+    position: relative;
+    display: flex;
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Oscurece la imagen con un overlay */
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding-top: 100px; /* Ajusta este valor para bajar más el texto */
+}
+
+.banner h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.text-section {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+    background-color: #f4f4f4ff;
+}
+
+.text-section h2 {
+    font-family: "Poppins";
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--gris);
+}
+
+.subtitulo {
+    position: relative;
+    padding-left: 22px; /* Espacio para la línea */
+    font-size: 2rem; /* Ajusta el tamaño del subtítulo */
+}
+
+.subtitulo::before {
+    content: ''; /* Crea el pseudoelemento */
+    position: absolute;
+    left: 8px; /* Alinea la línea al borde izquierdo del subtítulo */
+    top: 0;
+    height: 100%; /* La línea tendrá la misma altura que el subtítulo */
+    width: 6px; /* Grosor de la línea */
+    background-color: var(--verdeClaro); /* Color de la línea */
+}
+
+
+.section-paragraph {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-top: 2rem;
+}
+
+/* Estilos de la sección de imágenes */
+ .image-row {
+            display: flex;
+            justify-content: space-around; /* Espacio igual entre las imágenes */
+            align-items: center; /* Centra verticalmente las imágenes */
+            margin: 20px 0; /* Espacio arriba y abajo */
+        }
+
+        .image-row img {
+             /* Controla el ancho máximo de las imágenes */
+            width: 280px;
+            height: 185px;
+           /* Mantiene la proporción de las imágenes */
+            border-radius: 6px; /* Opcional: agrega bordes redondeados */
+            transition: transform 0.3s; /* Añade una transición suave */
+        }
+
+        .image-row img:hover {
+            transform: scale(1.05); /* Agranda ligeramente la imagen al pasar el mouse */
+        }
+
+
+
+ /* Estilos del footer */
+ footer {
+    background-color: var(--verdeOscuro); /* Color de fondo */
+    color: white; /* Color de texto */
+    padding: 20px; /* Espaciado interno */
+    display: flex; /* Usar flexbox para organizar elementos */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: space-between; /* Espacio entre elementos */
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten */
+    padding-left: 200px; /* Espaciado a la izquierda */
+    padding-right: 200px; /* Espaciado a la derecha */
+    margin-top: 0rem;
+  }
+  .footer-logo {
+    width: 170px; /* Ajusta el ancho del logo según sea necesario */
+    margin-right: 10px; /* Espaciado a la derecha del logo */
+  }
+  .contact-info {
+    display: flex;
+    flex-direction: column; /* Alinear elementos verticalmente */
+    margin-right: 10px; /* Espaciado a la derecha de la info de contacto */
+  }
+  .contact-info p {
+    margin: 5px 0; /* Espaciado vertical entre líneas */
+    font-size: 18px; /* Tamaño de fuente para la información */
+    font-weight: 500;
+    font-family: "Poppins";
+  }
+  
+  .contact-info i {
+    margin-right: 15px; /* Espaciado a la derecha de los iconos */
+  }
+  
+  .social-icons {
+    display: flex; /* Usar flexbox para las redes sociales */
+    flex-direction: column; /* Alinear elementos verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    gap: 1px; /* Espacio entre el texto y los iconos */
+  }
+  .social-icons p {
+    margin: 0; /* Sin margen para el texto de redes sociales */
+    font-size: 24px; /* Tamaño de fuente para el texto de redes */
+    font-weight: 700;
+  }
+  .social-icons a {
+    color: white; /* Color de los iconos */
+    font-size: 27px; /* Tamaño de los iconos */
+    text-decoration: none; /* Sin subrayado */
+    margin: 0 7px;
+  }
+  .social-icons a:hover {
+    color: #48924b; /* Cambia el color al pasar el mouse */
+  }
