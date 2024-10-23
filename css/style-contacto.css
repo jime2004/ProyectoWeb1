@@ -1,5 +1,4 @@
 /* General styles */
-
 :root {
     --blanco: #ffffff;
     --verdeOscuro: #8fa96d;
@@ -15,22 +14,19 @@ body,
 html {
     margin-top: 90px;
     padding: 0;
-    font-family: "Poppins";
+    font-family: "Poppins", Arial, sans-serif;
     padding-top: 1px;
 
 }
 
 header {
     background-color: var(--blanco);
-    /* Hace que el header sea fijo en la parte superior */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    /* Asegura que el menú esté por encima de otros elementos */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    /* Añade una pequeña sombra para destacar el menú */
     padding: 16px 0;
 }
 
@@ -49,7 +45,6 @@ header {
 
 nav {
     flex-grow: 2;
-    /* Esto permite que el menú tome más espacio */
 }
 
 nav ul {
@@ -81,23 +76,16 @@ nav ul li a::after {
     content: '';
     position: absolute;
     width: 100%;
-    /* Ancho del subrayado */
     height: 2px;
-    /* Grosor del subrayado */
     background-color: var(--cafeClaro);
-    /* Color del subrayado */
     left: 0;
     bottom: -5px;
-    /* Espacio entre el texto y el subrayado */
     transform: scaleX(0);
-    /* Comienza oculto */
     transition: transform 0.3s ease;
-    /* Transición suave */
 }
 
 nav ul li a:hover::after {
     transform: scaleX(1);
-    /* El subrayado se expande al hacer hover */
 }
 
 nav {
@@ -107,7 +95,6 @@ nav {
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-        /* Cambiar a columna en pantallas pequeñas */
     }
 
     nav ul {
@@ -122,16 +109,13 @@ nav {
 /* Banner Section */
 .banner {
     width: 100vw;
-    /* 100% del ancho del viewport */
     background-image: url('../img/Waterfall.jpg');
     background-size: cover;
     background-position: center;
     height: 40vh;
-    /* Controla la altura del banner */
     position: relative;
     display: flex;
     align-items: center;
-    /* Centra el contenido verticalmente */
     justify-content: center;
     color: white;
     margin: 0;
@@ -146,7 +130,6 @@ nav {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Oscurece la imagen con un overlay */
 }
 
 .banner-content {
@@ -154,7 +137,6 @@ nav {
     z-index: 1;
     text-align: center;
     padding-top: 100px;
-    /* Ajusta este valor para bajar más el texto */
 }
 
 .banner h1 {
@@ -169,11 +151,9 @@ nav {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
-    /* Centra la sección horizontalmente */
     padding: 50px 20px;
     margin-top: 5rem;
     text-align: center;
-    /* Centra el texto */
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -189,21 +169,26 @@ nav {
 
 .subtitulo {
     position: relative;
-    padding-left: 20px; /* Espacio para la línea */
-    font-size: 2rem; /* Ajusta el tamaño del subtítulo */
-}
-  
-.subtitulo::before {
-    content: ''; /* Crea el pseudoelemento */
-    position: absolute;
-    left: 0; /* Alinea la línea al borde izquierdo del subtítulo */
-    top: 0;
-    height: 100%; /* La línea tendrá la misma altura que el subtítulo */
-    width: 6px; /* Grosor de la línea */
-    background-color:var(--verdeClaro); /* Color de la línea */
+    padding-left: 20px;
+    font-size: 2rem;
 }
 
-.texto2{
+.subtitulo::before {
+    content: '';
+    /* Crea el pseudoelemento */
+    position: absolute;
+    left: 0;
+    /* Alinea la línea al borde izquierdo del subtítulo */
+    top: 0;
+    height: 100%;
+    /* La línea tendrá la misma altura que el subtítulo */
+    width: 6px;
+    /* Grosor de la línea */
+    background-color: var(--verdeClaro);
+    /* Color de la línea */
+}
+
+.texto2 {
     font-family: "Poppins", sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -303,14 +288,14 @@ textarea.form-control {
 .service-box p {
     font-size: 1.5em;
     font-weight: 600;
-    color:var(--gris);
+    color: var(--gris);
     font-family: "Poppins", sans-serif;
 }
 
 .service-box h1 {
     font-size: 1.1em;
     font-weight: 400;
-    color:var(--gris);
+    color: var(--gris);
     font-family: "Poppins", sans-serif;
 }
 
