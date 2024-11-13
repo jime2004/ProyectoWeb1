@@ -29,7 +29,8 @@ header {
   width: 100%;
   z-index: 1000; 
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-  padding: 16px 0;
+  padding: 5px 0;
+  height: auto;
 }
 
 .container {
@@ -39,14 +40,6 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-}
-
-.logo img {
-  width: 190px;
-}
-
-nav {
-  flex-grow: 2; 
 }
 
 nav ul {
@@ -65,9 +58,9 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #333;
-  font-size: 18px;
-  padding: 10px 5px;
+  color: #333 ;
+  font-size: 18px !important;
+  padding: 5px 5px !important;
 }
 
 nav ul li a:hover {
@@ -81,9 +74,9 @@ nav ul li a::after {
   height: 2px; 
   background-color: var(--cafeClaro); 
   left: 0;
-  bottom: -5px; 
+  bottom: -7px; 
   transform: scaleX(0);
-  transition: transform 0.3s ease; 
+  transition: transform 0.5s ease; 
 }
 
 nav ul li a:hover::after {
@@ -104,6 +97,7 @@ nav {
     gap: 20px; 
   }
 }
+
 
 /* Carrusel */
 .carousel-caption {
@@ -408,55 +402,91 @@ nav {
 
 
  /* Estilos del footer */
- footer {
-  background-color: var(--verdeOscuro); 
-  color: white; 
-  padding: 20px; 
+footer {
+  background-color: var(--verdeOscuro);
+  color: white;
+  padding: 20px;
   display: flex;
-  align-items: center; 
-  justify-content: space-between; 
-  flex-wrap: wrap; 
-  padding-left: 200px; 
-  padding-right: 200px; 
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 200px;
+  padding-right: 200px;
   margin-top: 6rem;
 }
+
 .footer-logo {
   width: 170px;
-  margin-right: 10px; 
+  margin-right: 10px;
 }
+
 .contact-info {
   display: flex;
-  flex-direction: column; 
-  margin-right: 10px; 
+  flex-direction: column;
+  margin-right: 10px;
 }
+
 .contact-info p {
-  margin: 5px 0; 
+  margin: 5px 0;
   font-size: 18px;
   font-weight: 500;
-  font-family: "Poppins" Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
 }
 
 .contact-info i {
-  margin-right: 15px; 
+  margin-right: 15px;
+  /* Espaciado a la derecha de los iconos */
 }
 
 .social-icons {
-  display: flex; 
+  display: flex;
   flex-direction: column;
-  align-items: center; 
-  gap: 1px; 
+  align-items: center;
+  gap: 1px;
 }
+
 .social-icons p {
-  margin: 0; 
-  font-size: 24px; 
+  margin: 0;
+  font-size: 24px;
   font-weight: 700;
 }
+
 .social-icons a {
-  color: white; 
-  font-size: 27px; 
-  text-decoration: none; 
+  color: white;
+  font-size: 27px;
+  text-decoration: none;
   margin: 0 7px;
 }
+
 .social-icons a:hover {
   color: #48924b;
+  /* Cambia el color al pasar el mouse */
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .footer-logo {
+    margin-bottom: 20px;
+  }
+
+  .contact-info {
+    align-items: center;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .contact-info p {
+    font-size: 16px;
+  }
+
+  .social-icons {
+    margin-top: 20px;
+  }
 }
