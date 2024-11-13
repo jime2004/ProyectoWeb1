@@ -357,7 +357,6 @@ nav {
 
 
 
-
 /* Estilos del footer */
 footer {
   background-color: var(--verdeOscuro);
@@ -418,4 +417,32 @@ footer {
 .social-icons a:hover {
   color: #48924b;
   /* Cambia el color al pasar el mouse */
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .footer-logo {
+    margin-bottom: 20px;
+  }
+
+  .contact-info {
+    align-items: center;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .contact-info p {
+    font-size: 16px;
+  }
+
+  .social-icons {
+    margin-top: 20px;
+  }
 }
