@@ -1,10 +1,12 @@
+/* Acordeón principal */
 .accordion {
-  padding-left: 17rem;
-  padding-right: 17rem;
-  padding-top: 5rem;
+  padding-left: 10vw; /* Usamos un valor relativo al ancho de la pantalla */
+  padding-right: 10vw; /* Lo mismo para el lado derecho */
+  padding-top: 0rem;
   align-items: center;
 }
 
+/* Estilo para los botones del acordeón */
 .accordion-button {
   font-family: "Poppins", sans-serif;
   font-size: 17px !important;
@@ -13,24 +15,59 @@
   font-weight: 500;
 }
 
+/* Estilo para el cuerpo del acordeón */
 .accordion-body {
   font-size: 18px;
 }
 
+/* Hover para los botones del acordeón */
 .accordion-button:hover {
   background-color: var(--verdeClaro);
 }
 
+/* Estilo cuando el botón no está colapsado */
 #accordionExample .accordion-button:not(.collapsed) {
   color: var(--blanco);
   background-color: var(--verdeClaro);
 }
 
+/* Estilo para el enfoque del botón */
 #accordionExample .accordion-button:focus {
   box-shadow: 0 0 0 0.25rem rgba(174, 204, 157, 0.25);
   border: none !important;
 }
 
+/* Pantallas medianas (tablets) */
+@media (max-width: 992px) {
+  .accordion {
+    padding-left: 5vw; /* Reducimos el padding horizontal */
+    padding-right: 5vw; /* Lo mismo para el lado derecho */
+  }
+
+  .accordion-button {
+    font-size: 16px; /* Reducimos el tamaño de la fuente en pantallas medianas */
+  }
+
+  .accordion-body {
+    font-size: 16px; /* Reducimos el tamaño del texto en el cuerpo */
+  }
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 576px) {
+  .accordion {
+    padding-left: 2rem; /* Reducimos aún más el padding en pantallas móviles */
+    padding-right: 2rem; /* Lo mismo para el lado derecho */
+  }
+
+  .accordion-button {
+    font-size: 14px; /* Reducimos el tamaño de la fuente en móviles */
+  }
+
+  .accordion-body {
+    font-size: 14px; /* Reducimos el tamaño del texto en el cuerpo */
+  }
+}
 
 :root {
   --blanco: #ffffff;
@@ -58,9 +95,10 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 16px 0;
+  z-index: 1000; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  padding: 5px 0;
+  height: auto;
 }
 
 .container {
@@ -70,14 +108,6 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-}
-
-.logo img {
-  width: 190px;
-}
-
-nav {
-  flex-grow: 2;
 }
 
 nav ul {
@@ -91,14 +121,14 @@ nav ul {
 }
 
 nav ul li {
-  position: relative;
+  position: relative; 
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #333;
-  font-size: 18px;
-  padding: 10px 5px;
+  color: #333 ;
+  font-size: 18px !important;
+  padding: 5px 5px !important;
 }
 
 nav ul li a:hover {
@@ -109,16 +139,16 @@ nav ul li a::after {
   content: '';
   position: absolute;
   width: 100%;
-  height: 2px;
-  background-color: var(--cafeClaro);
+  height: 2px; 
+  background-color: var(--cafeClaro); 
   left: 0;
-  bottom: -5px;
+  bottom: -7px; 
   transform: scaleX(0);
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease; 
 }
 
 nav ul li a:hover::after {
-  transform: scaleX(1);
+  transform: scaleX(1); 
 }
 
 nav {
@@ -129,14 +159,12 @@ nav {
   .container {
     flex-direction: column;
   }
-
   nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
   }
 }
-
 
 
 /* Banner Section */
@@ -259,6 +287,7 @@ footer {
 
 .contact-info i {
   margin-right: 15px;
+  /* Espaciado a la derecha de los iconos */
 }
 
 .social-icons {
@@ -283,4 +312,33 @@ footer {
 
 .social-icons a:hover {
   color: #48924b;
+  /* Cambia el color al pasar el mouse */
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .footer-logo {
+    margin-bottom: 20px;
+  }
+
+  .contact-info {
+    align-items: center;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .contact-info p {
+    font-size: 16px;
+  }
+
+  .social-icons {
+    margin-top: 20px;
+  }
 }
