@@ -22,9 +22,10 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 16px 0;
+  z-index: 1000; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  padding: 5px 0;
+  height: auto;
 }
 
 .container {
@@ -34,14 +35,6 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-}
-
-.logo img {
-  width: 190px;
-}
-
-nav {
-  flex-grow: 2;
 }
 
 nav ul {
@@ -55,14 +48,14 @@ nav ul {
 }
 
 nav ul li {
-  position: relative;
+  position: relative; 
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #333;
-  font-size: 18px;
-  padding: 10px 5px;
+  color: #333 ;
+  font-size: 18px !important;
+  padding: 5px 5px !important;
 }
 
 nav ul li a:hover {
@@ -73,30 +66,34 @@ nav ul li a::after {
   content: '';
   position: absolute;
   width: 100%;
-  height: 2px;
-  background-color: var(--cafeClaro);
+  height: 2px; 
+  background-color: var(--cafeClaro); 
   left: 0;
-  bottom: -5px;
+  bottom: -7px; 
   transform: scaleX(0);
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease; 
 }
 
 nav ul li a:hover::after {
-  transform: scaleX(1);
+  transform: scaleX(1); 
 }
 
+nav {
+  flex-grow: 2;
+}
 
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
   }
-
   nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
   }
 }
+
+
 
 .banner {
   width: 100vw;
@@ -173,9 +170,10 @@ nav ul li a:hover::after {
   margin-top: 2rem;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-}
+  gap: 1rem; 
+} 
 
+/* estilo de las tarjetas */
 .tarjeta {
   flex: 0 1 calc(50% - 1rem);
   max-width: 1200px;
@@ -222,6 +220,60 @@ nav ul li a:hover::after {
   color: var(--gris);
 }
 
+
+/* Consultas de medios */
+@media (max-width: 938px) {
+  .tarjeta {
+    flex-direction: column; /* Cambia a diseño en columna */
+    align-items: center; /* Centra los elementos */
+    text-align: center; /* Centra el texto */
+    flex: 0 1 calc(100% - 2rem); /* Ocupa el ancho completo menos márgenes */
+    margin: 1rem; /* Margen alrededor */
+    
+  }
+
+  .tarjeta img {
+    flex: 0 0 auto; /* Imagen adaptada para diseño en columna */
+    width: 90%; /* Imagen ocupa un 80% del ancho */
+    margin: 0 0 1rem; /* Espaciado debajo de la imagen */
+  }
+
+  .tarjeta-content {
+    width: 100%; /* El contenido ocupa todo el ancho disponible */
+  }
+
+}
+@media (max-width: 768px) {
+  .tarjetas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las tarjetas */
+    gap: 1rem; /* Espaciado entre tarjetas */
+    padding: 1rem 0rem 1rem 3.3rem; /* Más relleno a la izquierda */
+  }
+}
+
+@media (max-width: 480px) {
+  .tarjeta-container {
+    padding: 1rem; /* Margen interno para dispositivos pequeños */
+  }
+
+  .tarjeta {
+    margin: 1rem auto; /* Margen uniforme y centrado */
+  }
+
+  .tarjeta img {
+    width: 90%; /* Imagen más grande en dispositivos muy pequeños */
+  }
+
+  .tarjeta h3 {
+    font-size: 1rem; /* Ajusta el tamaño del encabezado */
+  }
+
+  .tarjeta p {
+    font-size: 0.9rem; /* Ajusta el tamaño del párrafo */
+  }
+}
 /* Estilo del botón "Ver más" */
 .btn-ver-mas {
   background-color: var(--verdeOscuro) !important;
@@ -316,11 +368,12 @@ footer {
   margin: 5px 0;
   font-size: 18px;
   font-weight: 500;
-  font-family: "Poppins";
+  font-family: "Poppins", Arial, sans-serif;
 }
 
 .contact-info i {
   margin-right: 15px;
+  /* Espaciado a la derecha de los iconos */
 }
 
 .social-icons {
@@ -345,8 +398,37 @@ footer {
 
 .social-icons a:hover {
   color: #48924b;
+  /* Cambia el color al pasar el mouse */
 }
 
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 6rem;
+  }
+
+  .footer-logo {
+    margin-bottom: 20px;
+  }
+
+  .contact-info {
+    align-items: center;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .contact-info p {
+    font-size: 16px;
+  }
+
+  .social-icons {
+    margin-top: 20px;
+  }
+}
 
 /* Barra lateral dentro de main */
 .barra-lateral {
@@ -359,11 +441,11 @@ footer {
 
 .barra-lateral ul {
   list-style-type: none;
-  padding: 0;
+  padding: 0px;
 }
 
 .barra-lateral li {
-  margin-bottom: 25px;
+  margin-bottom: 55px;
 }
 
 .barra-lateral a {
