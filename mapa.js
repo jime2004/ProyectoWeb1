@@ -11,16 +11,34 @@ async function initMap() {
 
   // Inicializar el mapa centrado en la posición
   map = new Map(document.getElementById("map"), {
-    zoom: 19,
+    zoom: 18,
     center: position,
     mapId: "DEMO_MAP_ID",
+  });
+
+  // Crear el contenido del InfoWindow
+  const infoWindowContent = `
+    <div style="font-family: Arial, sans-serif; font-size: 14px;">
+      <h2 style="font-size: 20px;">TurisTicos</h2>
+      <p>Nuestra ubicación</p>
+    </div>
+  `;
+
+  // Crear el InfoWindow
+  const infoWindow = new google.maps.InfoWindow({
+    content: infoWindowContent,
   });
 
   // Agregar un marcador en la posición inicial
   const marker = new AdvancedMarkerElement({
     map: map,
     position: position,
-    title: "Uluru",
+    title: "Mi Ubicación",
+  });
+
+  // Abrir el InfoWindow al hacer clic en el marcador
+  marker.addListener("click", () => {
+    infoWindow.open(map, marker);
   });
 }
 
