@@ -1,30 +1,55 @@
-/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 :root {
-  --blanco: #ffffff;
-  --verdeOscuro: #8fa96d;
-  --verdeClaro: #D4DDB1;
-  --cafe: #7A6448;
-  --beige: #F9F4E3;
-  --cafeClaro: #CDB28A;
-  --negro: #000000;
-  --gris: #333;
+    --blanco: #ffffff;
+    --verdeOscuro: #8fa96d; 
+    --verdeClaro: #D4DDB1;
+    --cafe: #7A6448; 
+    --beige: #F9F4E3;
+    --cafeClaro: #CDB28A;
+    --negro: #000000;
+    --gris:#333;
 }
 
-body,
-html {
-  margin-top: 90px;
-  font-family: "Poppins", Arial, sans-serif;
+body, html {
+    margin-top: -27px;
+    padding: 0;
+    font-family: "Poppins";
+    padding-top: 1px;
 }
 
 header {
-  background-color: var(--blanco);
+  background-color: #ffffff;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 16px 0;
+  z-index: 1000; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  padding: 5px 50px;
+  height: auto;
+}
+.circle-icon {
+  width: 45px; 
+  height: 45px; 
+  border-radius: 50%; 
+  border: 1px solid #333; 
+  background-color: transparent; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333; 
+  font-size: 1.1rem; 
+  transition: color 0.3s, border-color 0.3s, transform 0.3s;
+}
+
+.circle-icon:hover {
+  color: var(--verdeOscuro); 
+  border-color: var(--verdeOscuro);
+  transform: scale(1.1);
 }
 
 .container {
@@ -34,14 +59,6 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-}
-
-.logo img {
-  width: 190px;
-}
-
-nav {
-  flex-grow: 2;
 }
 
 nav ul {
@@ -55,14 +72,14 @@ nav ul {
 }
 
 nav ul li {
-  position: relative;
+  position: relative; 
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #333;
-  font-size: 18px;
-  padding: 10px 5px;
+  color: #333 ;
+  font-size: 18px !important;
+  padding: 5px 5px !important;
 }
 
 nav ul li a:hover {
@@ -73,195 +90,89 @@ nav ul li a::after {
   content: '';
   position: absolute;
   width: 100%;
-  height: 2px;
-  background-color: var(--cafeClaro);
+  height: 2px; 
+  background-color: var(--cafeClaro); 
   left: 0;
-  bottom: -5px;
+  bottom: -7px; 
   transform: scaleX(0);
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease; 
 }
 
 nav ul li a:hover::after {
-  transform: scaleX(1);
+  transform: scaleX(1); 
 }
 
+nav {
+  flex-grow: 2;
+}
 
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
   }
-
   nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
   }
 }
 
-
-/* Banner Section */
-.banner {
-  width: 100vw;
-  background-image: url('../img/PlayaCR.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 40vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  margin: 0;
-  padding: 0;
+main{
+  padding-top: 150px !important;
 }
 
-.banner::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.banner-content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding-top: 100px;
-}
-
-.banner h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
-}
-
-
-/*Textos section*/
-.text-section {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 50px 20px;
-  margin-top: 5rem;
-  text-align: center;
-  background-color: #fff;
+.card {
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-}
-
-.text-section h2 {
-  font-family: "Poppins";
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: var(--gris);
-}
-
-.section-paragraph {
-  font-size: 1.25rem;
-  line-height: 1.6;
-  color: #555;
-  margin-bottom: 15px;
-  margin-left: 5rem;
-  margin-right: 5rem;
-}
-
-.text-section:hover {
-  transform: translateY(-20px);
-}
-
-
-
-/* Services section */
-.services {
-  background-color: #ffffff;
-  padding: 40px 100px;
-  text-align: center;
-  margin-top: 5rem;
-}
-
-.services h2 {
-  font-family: "Poppins";
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: var(--gris);
-}
-
-.subtitulo {
+  overflow: hidden;
+  max-width: 300px;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  padding-left: 20px;
-  font-size: 2rem;
 }
 
-.subtitulo::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 6px;
-  background-color: var(--verdeClaro);
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  border: 1px solid #e0e0e0;
-}
-
-.service-box {
-  background-color: #f9f9f9;
-  padding: 30px 20px;
-  text-align: center;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  margin-bottom: 15px;
-  border: 1px solid #e0e0e0;
-}
-
-.service-box img {
-  max-width: 100px;
-  margin-bottom: 15px;
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
   transition: transform 0.3s ease;
 }
 
-.service-box p {
-  font-size: 1.1em;
-  font-weight: 600;
-  color: #555;
-  font-family: "Poppins", sans-serif;
+.card:hover .card-img-top {
+  transform: translateY(-20px);
 }
 
-.service-box:last-child {
-  border-right: none;
-  /* No borde en el último ítem de la fila */
+.card-body {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
-.service-box:nth-child(3n) {
-  border-right: none;
-  /* Quita borde derecho en cada tercera caja */
+.card:hover .card-body {
+  transform: translateY(-20px);
+  opacity: 1; 
 }
 
-.service-box:nth-child(-n+3) {
-  border-top: none;
-  /* Quita borde superior en la primera fila */
+.btn {
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-/* Efectos de animación al pasar el cursor */
-.service-box:hover {
-  transform: scale(1.05);
-  /* Aumenta ligeramente el tamaño */
-  background-color: #e0e0e0;
+.card:hover .btn {
+  opacity: 1;
 }
 
-.service-box:hover img {
-  transform: scale(1.1);
-  /* Agranda un poco el ícono */
+.price {
+  color: var(--gris);
+  font-weight: bold;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
 }
+
+
 
 
 /* Estilos del footer */
@@ -298,6 +209,7 @@ footer {
 
 .contact-info i {
   margin-right: 15px;
+  /* Espaciado a la derecha de los iconos */
 }
 
 .social-icons {
@@ -322,26 +234,33 @@ footer {
 
 .social-icons a:hover {
   color: #48924b;
+  /* Cambia el color al pasar el mouse */
 }
 
-.service-box a {
-  text-decoration: none;
-  color: inherit;
-}
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
-.service-box a:hover {
-  color: inherit;
-  text-decoration: none;
-  opacity: 1;
-}
+  .footer-logo {
+    margin-bottom: 20px;
+  }
 
-.buttonInfo {
-  padding: 10px 20px;
-  background-color: #8fa96d;
-  color: white;
-  border: none;
-  border-radius: 15px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
+  .contact-info {
+    align-items: center;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .contact-info p {
+    font-size: 16px;
+  }
+
+  .social-icons {
+    margin-top: 20px;
+  }
 }
