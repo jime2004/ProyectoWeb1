@@ -25,153 +25,153 @@
         "name": "Tour Isla Tortuga",
         "description": "Disfrute de un paradisíaco  archipiélago compuesto por varias islas y playas de arenas blancas.",
         "price": 49.99,
-        "image": "img/ballenas.jpg"
+        "image": "img/Isla-Tortuga.jpeg"
     },
     {
         "id": 5,
         "name": "Tour Monteverde",
         "description": "Uno de los destinos más visitados en el país, para realizar canopy, visitar el insectario y más.",
         "price": 49.99,
-        "image": "img/ballenas.jpg"
+        "image": "img/Monteverde.jpeg"
     },
     {
         "id": 6,
         "name": "Tour Baldi Hot Springs 1 Noche",
         "description": "En la base del Volcán Arenal, centro turístico de aguas termales.",
         "price": 49.99,
-        "image": "img/ballenas.jpg"
+        "image": "img/Baldi.png"
     },
     {
         "id": 7,
         "name": "Hotel Dreams Las Mareas",
         "description": "Una playa majestuosa como lo es El Jobo en Guanacaste y un delicado servicio.",
         "price": 49.99,
-        "image": "img/ballenas.jpg"
+        "image": "img/HotelDreams.jpg"
     },
     {
         "id": 8,
         "name": "Hotel Fiesta Puntarenas",
         "description": "Este destino es el ideal pues está a tan solo 50 minutos de San José. Ambiente relajado rodeado, piscinas y oferta gastronómica de todo incluido.",
         "price": 49.99,
-        "image": "img/ballenas.jpg"
+        "image": "img/FiestaResort.jpeg"
     },
     {
         "id": 9,
         "name": "Hotel Planet Hollywood",
         "description": "Ambiente temático inspirado en Hollywood, frente a la paradisiaca costa del Pacifico.",
         "price": 49.99,
-        "image": "img/ballenas.jpg"
+        "image": "img/PlanetH.jpg"
     },
     {
         "id": 10,
         "name": "Hotel Riu Guanacaste",
         "description": "El complejo de 5 estrellas, Hotel Riu Guanacaste (Todo Incluido 24h), está situado en la playa de Matapalo en Guanacaste, Costa Rica.",
         "price": 49.99,
-        "image": "img/ballenas.jpg"
+        "image": "img/RiuGuanacaste.jpg"
     },
     {
         "id": 11,
         "name": "Hotel Riu Palace",
         "description": "Todo Incluido 24h, está situado en la playa de Matapalo en Guanacaste, Costa Rica.",
         "price": 49.99,
-        "image": "img/ballenas.jpg"
+        "image": "img/HotelRiu.jpg"
     },
     {
         "id": 12,
         "name": "Hotel The Westin Conchal",
         "description": "Hotel The Westin Golf Resort & Spa Reserva Conchal",
         "price": 49.99,
-        "image": "img/ballenas.jpg"
+        "image": "img/Westin.jpeg"
     },
     {
         "id": 13,
         "name": "Hotel Baldi Hot Springs",
         "description": "Momento de disfrutar los beneficios de las aguas termales, relájese como merece.",
         "price": 49.99,
-        "image": "img/ballenas.jpg"
+        "image": "img/Baldi2.jpg"
     },
     {
         "id": 14,
         "name": "3 Gigantes (JAPÓN, COREA Y CHINA)",
         "description": "Viaja con nosotros a 3 increíbles países",
         "price": 49.99,
-        "image": "img/ballenas.jpg"
+        "image": "img/JaponCorea.jpg"
     },
     {
         "id": 15,
         "name": "Bariloche & Buenos Aires",
         "description": "Viajes a Argentina desde Costa Rica.",
         "price": 49.99,
-        "image": "img/ballenas.jpg"
+        "image": "img/Bariloche.jpg"
     },
     {
         "id": 16,
         "name": "Bocas del Toro",
         "description": "Salidas desde Costa Rica a Bocas del Toro, Panamá.",
         "price": 49.99,
-        "image": "img/ballenas.jpg"
+        "image": "img/BocasDelToro.jpg"
     },
     {
         "id": 17,
         "name": "Cancún",
         "description": "Bellas playas de arena blanca y sus aguas claras. Garantizando diversión y relajación. Personalice su viaje a Cancún con nosotros.",
         "price": 49.99,
-        "image": "img/ballenas.jpg"
+        "image": "img/cancun2.jpeg"
     },
     {
         "id": 18,
         "name": "Cartagena de Indias",
         "description": "Viajes a Cartagena de Indias, Colombia desde Costa Rica.",
         "price": 49.99,
-        "image": "img/ballenas.jpg"
+        "image": "img/Cartagena.jpg"
     },
     {
         "id": 19,
         "name": "Guatemala Básico",
         "description": "4 días / 3 noches. Ciudad con un legado y una magia propia.",
         "price": 49.99,
-        "image": "img/ballenas.jpg"
+        "image": "img/Guatemala.jpg"
     },
     {
         "id": 20,
         "name": "Lo Mejor de Brasil",
         "description": "Viajes a Brasil desde Costa Rica. Rio Janeiro / Foz do Iguazu / Manaus / Selva  / Salvador Bahía",
         "price": 49.99,
-        "image": "img/ballenas.jpg"
+        "image": "img/Brasil.jpg"
     },
     {
         "id": 21,
         "name": "Los Cabos",
         "description": "Aguas claras de tono turquesa que se pierde al horizonte con el cielo. Arena blanca y cálida.",
         "price": 49.99,
-        "image": "img/ballenas.jpg"
+        "image": "img/playas-cabo-san-lucas.jpeg"
     },
     {
         "id": 22,
         "name": "Medellín",
         "description": "Viajes a la ciudad de Medellín, Colombia desde Costa Rica.",
         "price": 49.99,
-        "image": "img/ballenas.jpg"
+        "image": "img/Medellin.png"
     },
     {
         "id": 23,
         "name": "Perú Clásico",
         "description": "Perú cuenta con diversos atractivos que lo convierten en un destino turístico muy completo.",
         "price": 49.99,
-        "image": "img/ballenas.jpg"
+        "image": "img/machupicchu-llamas-home.jpg"
     },
     {
         "id": 24,
         "name": "Río de Janeiro",
         "description": "Viajes a Río de Janeiro desde Costa Rica.",
         "price": 49.99,
-        "image": "img/ballenas.jpg"
+        "image": "img/RioJaneiro.jpeg"
     },
     {
         "id": 25,
         "name": "Joyas Del Sudeste Asiático",
         "description": "Tailandia, Vietnam y Singapur.",
         "price": 49.99,
-        "image": "img/ballenas.jpg"
+        "image": "img/Singapur.jpg"
     }
 ]
