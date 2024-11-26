@@ -3,7 +3,7 @@ let cart = [];
 
 // Función para cargar servicios desde JSON
 function loadServices() {
-    fetch('servicios.json') // Cambia esta URL si usas un archivo local
+    fetch('http://localhost:8080/servicios.json') // Cambia esta URL si usas un archivo local http://localhost:8080/servicios.json    servicios.json
         .then(response => {
             if (!response.ok) {
                 Swal.fire('Error', 'No se pudo cargar el archivo JSON. Código de error: ' + response.status, 'error');
