@@ -11,14 +11,14 @@
         "name": "Tour Safari",
         "description": "Variedad de atracciones en Ponderosa Adventure Park.",
         "price": 39.99,
-        "image": "img/2GRYHDTB5ND7DDXI3EDCIGLHGU.jpg"
+        "image": "img/Ponderosa.png"
     },
     {
         "id": 3,
         "name": "Tour Cataratas La Paz",
         "description": "El fresco del clima de Vara Blanca le espera.",
         "price": 49.99,
-        "image": "img/ballenas.jpg"
+        "image": "img/la-paz-waterfals-costa-rica.jpg"
     },
     {
         "id": 4,
