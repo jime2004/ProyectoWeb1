@@ -536,14 +536,14 @@ nav {
 }
 
 /*Sección de Información*/
-
 .informacion {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5rem;
-  background-color:#f7f7f7;
+  background-color: #f7f7f7;
   margin-top: 5rem;
+  flex-wrap: wrap; /* Permite que los elementos se acomoden en varias líneas si es necesario */
 }
 
 .texto {
@@ -553,7 +553,7 @@ nav {
 .texto h1 {
   font-size: 2.5rem;
   font-weight: 600;
-  color: var(--cafe) 
+  color: var(--cafe);
 }
 
 .texto p {
@@ -566,6 +566,60 @@ nav {
   height: 350px;
   border-radius: 1%;
 }
+
+/* Responsivo: cuando la pantalla es pequeña */
+@media (max-width: 1224px) {
+  .informacion {
+    padding: 3rem; /* Reducir el padding en pantallas medianas */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+    text-align: center; /* Centrar el texto */
+    flex-direction: column; /* Cambiar la dirección de los elementos a columna */
+  }
+
+  .texto {
+    max-width: 60%; /* Aumentar el espacio para el texto */
+  }
+
+  .texto h1 {
+    font-size: 2rem; /* Reducir el tamaño de la fuente en pantallas medianas */
+  }
+
+  .texto p {
+    font-size: 1.1rem; /* Reducir ligeramente el tamaño del texto */
+  }
+
+  .imagen img {
+    height: 300px; /* Ajustar el tamaño de la imagen */
+  }
+}
+
+@media (max-width: 768px) {
+  .informacion {
+    padding: 2rem; /* Reducir el padding aún más en pantallas pequeñas */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+    text-align: center; /* Centrar el texto */
+    flex-direction: column; /* Cambiar la dirección de los elementos a columna */
+  }
+
+  .texto {
+    max-width: 100%; /* Hacer que el texto ocupe todo el ancho */
+    margin-bottom: 2rem; /* Añadir un margen en la parte inferior */
+  }
+
+  .texto h1 {
+    font-size: 1.8rem; /* Ajustar el tamaño de la fuente */
+  }
+
+  .texto p {
+    font-size: 1rem; /* Reducir el tamaño del párrafo */
+  }
+
+  .imagen img {
+    height: 250px; /* Reducir el tamaño de la imagen */
+    margin-top: 2rem; /* Asegurar espacio entre el texto y la imagen */
+  }
+}
+
 
 /* Sección de Servicios, tarjetas verdes*/
 
