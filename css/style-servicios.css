@@ -1,7 +1,5 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  font-family: "Poppins";
 }
 :root {
     --blanco: #ffffff;
@@ -133,7 +131,7 @@ nav {
 
 
 main{
-  padding-top: 150px !important;
+  padding-top: 50px !important;
 }
 
 .card {
@@ -179,6 +177,11 @@ main{
 .card:hover .btn {
   opacity: 1;
 }
+
+.card-title{
+  font-weight: 600;
+}
+
 
 .price {
   color: var(--gris);

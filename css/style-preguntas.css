@@ -1,3 +1,6 @@
+* {
+  font-family: "Poppins";
+}
 /* Acordeón principal */
 .accordion {
   padding-left: 10vw; /* Usamos un valor relativo al ancho de la pantalla */

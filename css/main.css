@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins";
 }
 :root {
     --blanco: #ffffff;
@@ -146,15 +147,15 @@ nav {
 
 .carousel-caption {
     top: 15%; /* Mueve el título y subtítulo hacia arriba */
-
 }
 
 .carousel-caption h1 {
-  font-size: 8vw; /* El tamaño del texto cambia según el ancho de la ventana */
+  font-size: 7vw; /* El tamaño del texto cambia según el ancho de la ventana */
+  font-weight: 600;
 }
 
 .carousel-caption p {
-  font-size: 3vw; /* Ajusta el tamaño del subtítulo */
+  font-size: 2vw; /* Ajusta el tamaño del subtítulo */
 }
 
 .custom-arrow {

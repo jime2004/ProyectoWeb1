@@ -1,4 +1,7 @@
 /* General styles */
+* {
+  font-family: "Poppins";
+}
 :root {
   --blanco: #ffffff;
   --verdeOscuro: #8fa96d;
