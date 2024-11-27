@@ -15,41 +15,23 @@
 }
 
 body, html {
-    margin-top: -27px;
-    padding: 0;
-    font-family: "Poppins";
-    padding-top: 1px;
+  margin-top: 90px;
+  padding: 0;
+  font-family: "Poppins";
+  padding-top: 1px;
+
 }
 
 header {
-  background-color: #ffffff;
+  background-color: var(--blanco);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000; 
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-  padding: 5px 50px;
+  padding: 5px 0;
   height: auto;
-}
-.circle-icon {
-  width: 45px; 
-  height: 45px; 
-  border-radius: 50%; 
-  border: 1px solid #333; 
-  background-color: transparent; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #333; 
-  font-size: 1.1rem; 
-  transition: color 0.3s, border-color 0.3s, transform 0.3s;
-}
-
-.circle-icon:hover {
-  color: var(--verdeOscuro); 
-  border-color: var(--verdeOscuro);
-  transform: scale(1.1);
 }
 
 .container {
@@ -106,16 +88,49 @@ nav {
   flex-grow: 2;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 993px) {
   .container {
     flex-direction: column;
   }
   nav ul {
     flex-direction: column; 
     align-items: center; 
-    gap: 20px; 
+    gap: 15px; 
+  }
+  .cart-icon {
+    position: absolute; /* Posición absoluta para mover el carrito */ 
+    top: 27px; /* Alineado con la parte superior del navbar */
+    right: 11px; /* Ajusta la distancia a la izquierda del botón de menú */
+  }
+
+  .navbar-toggler {
+    position: relative; /* Mantén el botón de menú en su lugar */
+    z-index: 1; /* Asegura que el botón esté encima del carrito */
+  }
+
+  .container-fluid {
+    position: relative; /* Asegura que el carrito se posicione correctamente dentro del contenedor */
   }
 }
+
+.navbar-nav {
+  display: flexbox;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.cart-icon {
+  margin-left: auto; 
+  margin-right: 90px; 
+  display: flex;
+  align-items: center; 
+}
+
+.cart-icon img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 
 
 /* Carrusel */
