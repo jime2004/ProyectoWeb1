@@ -134,29 +134,43 @@ nav {
 
 
 /* Carrusel */
-.carousel-caption {
-  position: absolute;
-  top: 40%;
-  left: 90%;
-  right: 90%;
-  transform: translate(-15%, 22%);
-  width: 100%;
+
+
+/* Ajustar el tamaño de las imágenes en el carousel */
+.carousel-item img {
+  width: 100%;  /* Para que se ajuste al 100% del ancho del contenedor */
+  height: 494px; /* Cambia esta medida para ajustar la altura */
+  object-fit: cover; /* Asegura que las imágenes se ajusten bien al espacio sin deformarse */
+  filter: brightness(50%); /* Oscurece la imagen */
 }
 
-.carousel-caption h5 {
-  font-size: 4rem;
-  font-weight: bold;
-  text-transform: uppercase;
+.carousel-caption {
+    top: 15%; /* Mueve el título y subtítulo hacia arriba */
+
+}
+
+.carousel-caption h1 {
+  font-size: 8vw; /* El tamaño del texto cambia según el ancho de la ventana */
 }
 
 .carousel-caption p {
-  font-size: 1.5rem;
+  font-size: 3vw; /* Ajusta el tamaño del subtítulo */
 }
-.carousel-item img {
-  height: 700px; 
-  object-fit: cover;
-  filter: brightness(70%);
-  
+
+.custom-arrow {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para mejor visibilidad */
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: 5%; /* Reduce el ancho del área de clic para ajustarse a las flechas */
+}
+
+.carousel-control-prev:hover .custom-arrow,
+.carousel-control-next:hover .custom-arrow {
+  color: #00ff88; /* Cambia el color al pasar el mouse */
 }
 
 /*Tarjetas */
@@ -188,7 +202,7 @@ nav {
   top: 0;
   height: 100%;
   width: 6px;
-  background-color:var(--verdeClaro); 
+  background-color: var(--verdeClaro); 
 }
 
 .tarjetas-container {
@@ -200,7 +214,7 @@ nav {
 } 
 
 .tarjeta {
-  flex: calc(100vw /5);
+  flex: 1 1 calc(20% - 1rem); /* Esto permite que las tarjetas sean más flexibles */
   background-color: #f4f4f4;
   border: 1px solid #ddd;
   padding: 1rem;
@@ -221,30 +235,130 @@ nav {
   margin-bottom: 1.5rem;
 }
 
-.tarjeta h3{
+.tarjeta h3 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--gris);
 }
 
-.tarjeta h3:hover{
+.tarjeta h3:hover {
   color: var(--verdeOscuro);
 }
 
-.tarjeta p{
+.tarjeta p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   font-weight: 200;
   color: var(--cafe);
 }
 
-/*Cards para destinos nacionales*/
+/* Estilos Responsivos */
+@media (max-width: 1200px) {
+  .tarjetas {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
 
+  .tarjetas-container {
+    gap: 1.5rem;
+  }
+
+  .tarjeta {
+    flex: 1 1 calc(25% - 1.5rem); /* 4 tarjetas por fila */
+  }
+}
+
+@media (max-width: 992px) {
+  .tarjetas {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .tarjetas-container {
+    gap: 1rem;
+  }
+
+  .tarjeta {
+    flex: 1 1 calc(33.33% - 1rem); /* 3 tarjetas por fila */
+  }
+
+  .tarjetas h2 {
+    font-size: 2rem;
+  }
+
+  .subtitulo {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tarjetas {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .tarjetas-container {
+    gap: 0.5rem;
+  }
+
+  .tarjeta {
+    flex: 1 1 calc(50% - 0.5rem); /* 2 tarjetas por fila */
+  }
+
+  .tarjetas h2 {
+    font-size: 1.8rem;
+  }
+
+  .subtitulo {
+    font-size: 1.3rem;
+  }
+
+  .tarjeta h3 {
+    font-size: 1.3rem;
+  }
+
+  .tarjeta p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .tarjetas {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .tarjetas-container {
+    gap: 0.5rem;
+  }
+
+  .tarjeta {
+    flex: 1 1 100%; /* 1 tarjeta por fila */
+  }
+
+  .tarjetas h2 {
+    font-size: 1.5rem;
+  }
+
+  .subtitulo {
+    font-size: 1.2rem;
+  }
+
+  .tarjeta h3 {
+    font-size: 1.1rem;
+  }
+
+  .tarjeta p {
+    font-size: 0.9rem;
+  }
+}
+
+/*Cards para destinos nacionales*/
 .cards {
   margin-bottom: 2em;
-  margin-left: 6rem;
-  margin-right: 6rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
   margin-top: 4rem;
 }
 
@@ -265,7 +379,6 @@ nav {
 }
 
 .card {
-  flex: 1 1 calc(25% - 2rem);
   background-color: var(--blanco);
   border: 1px solid #ddd;
   padding: 1rem;
@@ -274,8 +387,66 @@ nav {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 1rem;
   transition: transform 0.3s;
+  width: calc(50% - 1rem); /* 50% width to ensure two cards per row */
+  max-width: 500px; /* Prevent cards from becoming too wide */
+  min-width: 280px; /* Prevent cards from becoming too narrow */
+  box-sizing: border-box; /* To include padding and borders in the width */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* To evenly distribute content */
+  height: 100%; /* Allow cards to stretch vertically */
+  flex-grow: 1; /* Allow cards to grow with container */
 }
 
+/* Responsivo: Cuatro tarjetas por fila en pantallas grandes */
+@media (min-width: 1200px) {
+  .cards-container {
+    gap: 1rem;
+  }
+
+  .card {
+    width: calc(25% - 1rem); /* 4 tarjetas por fila */
+  }
+
+  .cards {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}
+
+/* Responsivo: Dos tarjetas por fila en pantallas medianas */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .cards-container {
+    gap: 1rem;
+  }
+
+  .card {
+    width: calc(50% - 1rem); /* 2 tarjetas por fila */
+  }
+
+  .cards {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+}
+
+/* Responsivo: Una tarjeta por fila en pantallas pequeñas */
+@media (max-width: 768px) {
+  .cards-container {
+    gap: 1rem;
+  }
+
+  .card {
+    width: calc(100% - 1rem); /* 1 tarjeta por fila */
+  }
+
+  .cards {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+/* Estilos para el hover */
 .card:hover {
   transform: translateY(-10px);
 }
@@ -307,7 +478,7 @@ nav {
   margin-bottom: 1rem;
 }
 
-.card h3:hover{
+.card h3:hover {
   color: var(--verdeOscuro);
 }
 
