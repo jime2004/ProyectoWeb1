@@ -11,9 +11,9 @@
 
 body,
 html {
-  margin-top: 88px;
+  margin-top: 90px;
   padding: 0;
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: "Poppins";
   padding-top: 1px;
 
 }
@@ -84,16 +84,49 @@ nav {
   flex-grow: 2;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 993px) {
   .container {
     flex-direction: column;
   }
   nav ul {
     flex-direction: column; 
     align-items: center; 
-    gap: 20px; 
+    gap: 15px; 
+  }
+  .cart-icon {
+    position: absolute; /* Posición absoluta para mover el carrito */ 
+    top: 27px; /* Alineado con la parte superior del navbar */
+    right: 11px; /* Ajusta la distancia a la izquierda del botón de menú */
+  }
+
+  .navbar-toggler {
+    position: relative; /* Mantén el botón de menú en su lugar */
+    z-index: 1; /* Asegura que el botón esté encima del carrito */
+  }
+
+  .container-fluid {
+    position: relative; /* Asegura que el carrito se posicione correctamente dentro del contenedor */
   }
 }
+
+.navbar-nav {
+  display: flexbox;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.cart-icon {
+  margin-left: auto; 
+  margin-right: 90px; 
+  display: flex;
+  align-items: center; 
+}
+
+.cart-icon img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 
 .text-section {
   width: 100%;

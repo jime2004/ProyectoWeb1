@@ -12,89 +12,122 @@
 
 body,
 html {
-    margin-top: 90px;
-    padding: 0;
-    font-family: "Poppins", Arial, sans-serif;
-    padding-top: 1px;
+  margin-top: 90px;
+  padding: 0;
+  font-family: "Poppins";
+  padding-top: 1px;
 
 }
 
 header {
-    background-color: var(--blanco);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-    padding: 5px 0;
-    height: auto;
-  }
-  
+  background-color: var(--blanco);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  padding: 5px 0;
+  height: auto;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  position: relative; 
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333 ;
+  font-size: 18px !important;
+  padding: 5px 5px !important;
+}
+
+nav ul li a:hover {
+  color: var(--verdeOscuro);
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px; 
+  background-color: var(--cafeClaro); 
+  left: 0;
+  bottom: -7px; 
+  transform: scaleX(0);
+  transition: transform 0.5s ease; 
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1); 
+}
+
+nav {
+  flex-grow: 2;
+}
+
+@media (max-width: 993px) {
   .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    flex-direction: column;
   }
-  
   nav ul {
-    list-style-type: none;
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-    flex-grow: 1;
-    margin: 0;
-    padding: 0;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 15px; 
   }
-  
-  nav ul li {
-    position: relative; 
+  .cart-icon {
+    position: absolute; /* Posición absoluta para mover el carrito */ 
+    top: 27px; /* Alineado con la parte superior del navbar */
+    right: 11px; /* Ajusta la distancia a la izquierda del botón de menú */
   }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #333 ;
-    font-size: 18px !important;
-    padding: 5px 5px !important;
+
+  .navbar-toggler {
+    position: relative; /* Mantén el botón de menú en su lugar */
+    z-index: 1; /* Asegura que el botón esté encima del carrito */
   }
-  
-  nav ul li a:hover {
-    color: var(--verdeOscuro);
+
+  .container-fluid {
+    position: relative; /* Asegura que el carrito se posicione correctamente dentro del contenedor */
   }
-  
-  nav ul li a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px; 
-    background-color: var(--cafeClaro); 
-    left: 0;
-    bottom: -7px; 
-    transform: scaleX(0);
-    transition: transform 0.5s ease; 
-  }
-  
-  nav ul li a:hover::after {
-    transform: scaleX(1); 
-  }
-  
-  nav {
-    flex-grow: 2;
-  }
-  
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-    }
-    nav ul {
-      flex-direction: column; 
-      align-items: center; 
-      gap: 20px; 
-    }
-  }
+}
+
+.navbar-nav {
+  display: flexbox;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.cart-icon {
+  margin-left: auto; 
+  margin-right: 90px; 
+  display: flex;
+  align-items: center; 
+}
+
+.cart-icon img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
   
 /* Banner Section */
 .banner {
