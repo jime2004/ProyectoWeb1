@@ -18,16 +18,18 @@ function loadServices() {
             Swal.fire('Error', 'Hubo un problema con la carga de servicios: ' + error.message, 'error');
         });
 }
-// Función para mostrar los servicios en la tienda
+// Función para mostrar los servicios en la pagina
 function displayServices(services) {
     const serviceContainer = $("#services");
     serviceContainer.empty();
 
     services.forEach(service => {
         serviceContainer.append(`
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
+        <div class="col-6 col-md-4 col-lg-3 mb-4"  data-etiquetas="${service.category}">
                 <div class="card h-100 shadow-sm">
-                    <img src="${service.image}" class="card-img-top" alt="${service.name}">
+                     <a href="vacaciones-perfectas.html">
+                        <img src="${service.image}" class="card-img-top" alt="${service.name}">
+                    </a>
                     <div class="card-body">
                         <h5 class="card-title">${service.name}</h5>
                         <p class="card-text">${service.description}</p>
@@ -41,68 +43,40 @@ function displayServices(services) {
     });
 }
 
-// Función para agregar servicios al carrito
-function addToCart(serviceId) {
-    fetch('servicios.json')
-    .then(response => response.json())
-    .then(services => {
-        const service = services.find(s => s.id === serviceId);
-        const cartItem = cart.find(item => item.id === serviceId);
+let filteredServices = services;
 
-        if (cartItem) {
-            cartItem.quantity++;
-        } else {
-            cart.push({ ...service, quantity: 1 });
-        }
-        displayCart();
-        Swal.fire('Servicio agregado', `${service.name} ha sido agregado al carrito`, 'success');
-    });
-}
-
-// Función para mostrar los servicios en el carrito
-function displayCart() {
-    const cartTable = $("#cart-table tbody");
-    cartTable.empty();
-
-    let total = 0;
-
-    cart.forEach(item => {
-        const subtotal = item.price * item.quantity;
-        total += subtotal;
-
-        cartTable.append(`
-            <tr>
-                <td>${item.name}</td>
-                <td>$${item.price.toFixed(2)}</td>
-                <td>
-                    <input type="number" min="1" class="form-control" value="${item.quantity}" onchange="updateQuantity(${item.id}, this.value)">
-                </td>
-                <td>$${subtotal.toFixed(2)}</td>
-                <td>
-                    <button class="btn btn-danger btn-sm" onclick="removeFromCart(${item.id})">Eliminar</button>
-                </td>
-            </tr>
-        `);
-    });
-
-    $("#total-price").text(total.toFixed(2));
-}
-
-// Función para actualizar la cantidad de servicios
-function updateQuantity(serviceId, quantity) {
-    const cartItem = cart.find(item => item.id === serviceId);
-    if (cartItem) {
-        cartItem.quantity = parseInt(quantity);
-        displayCart();
+  // Función para filtrar servicios por categoría
+function filterServices(category) {
+    const servicesContainer = document.getElementById("services");
+    servicesContainer.innerHTML = "";
+  
+    // Filtrar servicios según la categoría seleccionada
+    if (category === "all") {
+      filteredServices = services;
+    } else {
+      filteredServices = services.filter(service => service.category === category);
     }
-}
-
-// Función para eliminar un servicio del carrito
-function removeFromCart(serviceId) {
-    cart = cart.filter(item => item.id !== serviceId);
-    displayCart();
-    Swal.fire('Servicio eliminado', 'El servicio ha sido eliminado del carrito', 'info');
-}
+  
+    // Mostrar los servicios filtrados
+    displayServices(filteredServices);
+  }
+  
+  // Función para ordenar servicios por precio
+  function sortServicesByPrice(order) {
+    const servicesContainer = document.getElementById("services");
+    servicesContainer.innerHTML = "";
+  
+    // Ordenar los servicios filtrados según el orden seleccionado
+    if (order) {
+      filteredServices.sort((a, b) => {
+        return order === "asc" ? a.price - b.price : b.price - a.price;
+      });
+    }
+  
+    // Mostrar los servicios ordenados
+    displayServices(filteredServices);
+  }
+  
 
 // Inicialización de la tienda
 $(document).ready(function() {

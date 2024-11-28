@@ -75,6 +75,37 @@
         </div>
       </nav>
 </header>
+
+    <section class="banner d-block w-100">
+      <div class="banner-content">
+          <h1>Servicios</h1>
+      </div>
+    </section>
+
+    <div class="filter-container">
+      <div class="filter-header">
+        <i class="fa fa-filter"></i>
+        <span>Filtrar</span>
+      </div>
+      <div class="filter-options">
+        <select id="categoryFilter" class="form-select" onchange="filterServices(this.value)">
+          <option value="all">Ver todo</option>
+          <option value="tours">Tours</option>
+          <option value="hoteles">Hoteles</option>
+          <option value="Internacionales">Internacionales</option>
+          <option value="Cruceros">Cruceros</option>
+          <option value="Especiales">Especiales</option>
+        </select>
+        <select id="priceSort" class="form-select" onchange="sortServicesByPrice(this.value)">
+          <option value="">Ordenar por precio</option>
+          <option value="asc">Precio: Menor a Mayor</option>
+          <option value="desc">Precio: Mayor a Menor</option>
+        </select>
+      </div>
+    </div>
+    
+  
+
     <main class="container my-5">
       <div class="row" id="services"></div>
       </div>

@@ -3,15 +3,15 @@
         "id": 1,
         "name": "Tour Río Celeste",
         "description": "Tour de un día en Río Celeste.",
-        "price": 29.99,
+        "price": 105.99,
         "category": "tours",
-        "image": "img/rioCeleste1.jpg"
+        "image": "img/RioCeleste.jpg"
     },
     {
         "id": 2,
         "name": "Tour Safari",
         "description": "Variedad de atracciones en Ponderosa Adventure Park.",
-        "price": 39.99,
+        "price": 48.00,
         "category": "tours",
         "image": "img/Ponderosa.png"
     },
@@ -19,7 +19,7 @@
         "id": 3,
         "name": "Tour Cataratas La Paz",
         "description": "El fresco del clima de Vara Blanca le espera.",
-        "price": 49.99,
+        "price": 65.99,
         "category": "tours",
         "image": "img/la-paz-waterfals-costa-rica.jpg"
     },
@@ -27,7 +27,7 @@
         "id": 4,
         "name": "Tour Isla Tortuga",
         "description": "Disfrute de un paradisíaco  archipiélago compuesto por varias islas y playas de arenas blancas.",
-        "price": 49.99,
+        "price": 99.00,
         "category": "tours",
         "image": "img/Isla-Tortuga.jpeg"
     },
@@ -43,7 +43,7 @@
         "id": 6,
         "name": "Tour Baldi Hot Springs 1 Noche",
         "description": "En la base del Volcán Arenal, centro turístico de aguas termales.",
-        "price": 49.99,
+        "price": 135.00,
         "category": "tours",
         "image": "img/Baldi.png"
     },
@@ -51,63 +51,63 @@
         "id": 7,
         "name": "Hotel Dreams Las Mareas",
         "description": "Una playa majestuosa como lo es El Jobo en Guanacaste y un delicado servicio.",
-        "price": 49.99,
-        "category": "Hoteles",
+        "price": 389.50,
+        "category": "hoteles",
         "image": "img/HotelDreams.jpg"
     },
     {
         "id": 8,
         "name": "Hotel Fiesta Puntarenas",
         "description": "Este destino es el ideal pues está a tan solo 50 minutos de San José. Ambiente relajado rodeado, piscinas y oferta gastronómica de todo incluido.",
-        "price": 49.99,
-        "category": "Hoteles",
+        "price": 318.00,
+        "category": "hoteles",
         "image": "img/FiestaResort.jpeg"
     },
     {
         "id": 9,
         "name": "Hotel Planet Hollywood",
         "description": "Ambiente temático inspirado en Hollywood, frente a la paradisiaca costa del Pacifico.",
-        "price": 49.99,
-        "category": "Hoteles",
+        "price": 416.99,
+        "category": "hoteles",
         "image": "img/PlanetH.jpg"
     },
     {
         "id": 10,
         "name": "Hotel Riu Guanacaste",
         "description": "El complejo de 5 estrellas, Hotel Riu Guanacaste (Todo Incluido 24h), está situado en la playa de Matapalo en Guanacaste, Costa Rica.",
-        "price": 49.99,
-        "category": "Hoteles",
+        "price": 259.00,
+        "category": "hoteles",
         "image": "img/RiuGuanacaste.jpg"
     },
     {
         "id": 11,
         "name": "Hotel Riu Palace",
         "description": "Todo Incluido 24h, está situado en la playa de Matapalo en Guanacaste, Costa Rica.",
-        "price": 49.99,
-        "category": "Hoteles",
+        "price": 307.50,
+        "category": "hoteles",
         "image": "img/HotelRiu.jpg"
     },
     {
         "id": 12,
         "name": "Hotel The Westin Conchal",
         "description": "Hotel The Westin Golf Resort & Spa Reserva Conchal",
-        "price": 49.99,
-        "category": "Hoteles",
+        "price": 439.99,
+        "category": "hoteles",
         "image": "img/Westin.jpeg"
     },
     {
         "id": 13,
         "name": "Hotel Baldi Hot Springs",
         "description": "Momento de disfrutar los beneficios de las aguas termales, relájese como merece.",
-        "price": 49.99,
-        "category": "Hoteles",
+        "price": 119.00,
+        "category": "hoteles",
         "image": "img/Baldi2.jpg"
     },
     {
         "id": 14,
         "name": "3 Gigantes (JAPÓN, COREA Y CHINA)",
         "description": "Viaja con nosotros a 3 increíbles países",
-        "price": 49.99,
+        "price": 3549.99,
         "category": "Internacionales",
         "image": "img/JaponCorea.jpg"
     },
@@ -115,7 +115,7 @@
         "id": 15,
         "name": "Bariloche & Buenos Aires",
         "description": "Viajes a Argentina desde Costa Rica.",
-        "price": 49.99,
+        "price": 1789.00,
         "category": "Internacionales",
         "image": "img/Bariloche.jpg"
     },
@@ -123,7 +123,7 @@
         "id": 16,
         "name": "Bocas del Toro",
         "description": "Salidas desde Costa Rica a Bocas del Toro, Panamá.",
-        "price": 49.99,
+        "price": 659.60,
         "category": "Internacionales",
         "image": "img/BocasDelToro.jpg"
     },
@@ -131,7 +131,7 @@
         "id": 17,
         "name": "Cancún",
         "description": "Bellas playas de arena blanca y sus aguas claras. Garantizando diversión y relajación. Personalice su viaje a Cancún con nosotros.",
-        "price": 49.99,
+        "price": 1425.00,
         "category": "Internacionales",
         "image": "img/cancun2.jpeg"
     },
@@ -139,7 +139,7 @@
         "id": 18,
         "name": "Cartagena de Indias",
         "description": "Viajes a Cartagena de Indias, Colombia desde Costa Rica.",
-        "price": 49.99,
+        "price": 799.99,
         "category": "Internacionales",
         "image": "img/Cartagena.jpg"
     },
@@ -147,7 +147,7 @@
         "id": 19,
         "name": "Guatemala Básico",
         "description": "4 días / 3 noches. Ciudad con un legado y una magia propia.",
-        "price": 49.99,
+        "price": 999.99,
         "category": "Internacionales",
         "image": "img/Guatemala.jpg"
     },
@@ -155,7 +155,7 @@
         "id": 20,
         "name": "Lo Mejor de Brasil",
         "description": "Viajes a Brasil desde Costa Rica. Rio Janeiro / Foz do Iguazu / Manaus / Selva  / Salvador Bahía",
-        "price": 49.99,
+        "price": 3039.00,
         "category": "Internacionales",
         "image": "img/Brasil.jpg"
     },
@@ -163,7 +163,7 @@
         "id": 21,
         "name": "Los Cabos",
         "description": "Aguas claras de tono turquesa que se pierde al horizonte con el cielo. Arena blanca y cálida.",
-        "price": 49.99,
+        "price": 839.99,
         "category": "Internacionales",
         "image": "img/playas-cabo-san-lucas.jpeg"
     },
@@ -171,7 +171,7 @@
         "id": 22,
         "name": "Medellín",
         "description": "Viajes a la ciudad de Medellín, Colombia desde Costa Rica.",
-        "price": 49.99,
+        "price": 765.00,
         "category": "Internacionales",
         "image": "img/Medellin.png"
     },
@@ -179,7 +179,7 @@
         "id": 23,
         "name": "Perú Clásico",
         "description": "Perú cuenta con diversos atractivos que lo convierten en un destino turístico muy completo.",
-        "price": 49.99,
+        "price": 1159.99,
         "category": "Internacionales",
         "image": "img/machupicchu-llamas-home.jpg"
     },
@@ -187,7 +187,7 @@
         "id": 24,
         "name": "Río de Janeiro",
         "description": "Viajes a Río de Janeiro desde Costa Rica.",
-        "price": 49.99,
+        "price": 1389.00,
         "category": "Internacionales",
         "image": "img/RioJaneiro.jpeg"
     },
@@ -195,7 +195,7 @@
         "id": 25,
         "name": "Joyas Del Sudeste Asiático",
         "description": "Tailandia, Vietnam y Singapur.",
-        "price": 49.99,
+        "price": 2649.00,
         "category": "Internacionales",
         "image": "img/Singapur.jpg"
     },
@@ -203,7 +203,7 @@
         "id": 26,
         "name": "Crucero Serenade Of The Seas 2025-2026",
         "description": "Las mejores vacaciones en Latinoamérica a bordo del crucero Serenade of the Seas. Saliendo desde Panamá. *Crucero sin visa*",
-        "price": 49.99,
+        "price": 1212.00,
         "category": "Cruceros",
         "image": "img/ROYALCARIBBEAN.jpg"
     },
@@ -211,7 +211,7 @@
         "id": 27,
         "name": "Crucero Caribe Sur Enero 2026",
         "description": "Salida Grupal desde Costa Rica a Panamá para abordar el Crucero. Reserve su espacio con $250",
-        "price": 49.99,
+        "price": 1299.99,
         "category": "Cruceros",
         "image": "img/Crucero.jfif"
     },
@@ -219,7 +219,7 @@
         "id": 28,
         "name": "Crucero Wonder of the seas 2025",
         "description": "Estados Unidos,Bahamas,México,Honduras saliendo de Puerto Canaveral",
-        "price": 49.99,
+        "price": 1441.99,
         "category": "Cruceros",
         "image": "img/wonder-of-the-seas.jpg"
     },
@@ -227,7 +227,7 @@
         "id": 29,
         "name": "Orlando Magia y Diversión",
         "description": "Planifica un viaje soñado a Disneyland",
-        "price": 49.99,
+        "price": 1839.00,
         "category": "Especiales",
         "image": "img/DisneyOrlando.jpg"
     },
@@ -235,7 +235,7 @@
         "id": 30,
         "name": "Disney California Adventure Park, CA, Estados Unidos",
         "description": "Comienza tu sueño de viajar a Disney",
-        "price": 49.99,
+        "price": 1900.00,
         "category": "Especiales",
         "image": "img/DisneyCalifornia.jpg"
     }
