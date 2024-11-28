@@ -236,8 +236,17 @@ main{
   opacity: 1; 
 }
 
+.btn-primary{
+  background-color: #48924b !important;
+  border-color: #8fa96d !important;
+}
+
+.btn-primary:hover{
+  background-color: #377039 !important;
+}
+
 .btn {
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.3s ease;
 }
 
@@ -248,7 +257,6 @@ main{
 .card-title{
   font-weight: 600;
 }
-
 
 .price {
   color: #5d8e5f;
@@ -284,6 +292,7 @@ main{
   font-size: 1.1rem;
   font-weight: 600;
 }
+
 
 
 /* Banner Section */

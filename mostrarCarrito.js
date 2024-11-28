@@ -1,5 +1,4 @@
 let services = [];
-// Carrito de compras almacenado en localStorage
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 // Función para cargar servicios desde JSON
@@ -12,7 +11,7 @@ function loadServices() {
             return response.json();
         })
         .then(data => {
-            services = data; // Guardamos los servicios cargados
+            services = data; 
         })
         .catch(error => {
             Swal.fire('Error', 'Hubo un problema con la carga de servicios: ' + error.message, 'error');
@@ -171,7 +170,7 @@ function updateQuantity(productId, quantity) {
 
 // Eventos de carga inicial
 $(document).ready(() => {
-    loadServices(); // Cargar productos desde JSON
+    loadServices();
     updateCartIndicator();
     displayCart();
 });
