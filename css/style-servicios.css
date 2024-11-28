@@ -269,7 +269,7 @@ main{
 }
 
 .custom-modal-header .modal-title {
-  color: #ffffff; /* También puedes definir el color específico del título */
+  color: #ffffff; 
   font-weight: 600;
   font-size: 1.5rem;
 }
