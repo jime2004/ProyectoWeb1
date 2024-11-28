@@ -102,10 +102,57 @@ function filterServices(category) {
         .catch(error => console.error('Error al cargar detalles del producto:', error));
 }
 
+//**
+// Función para agregar productos al carrito
+function addToCart(productId) {
+  const product = services.find(p => p.id === productId);
+  const cartItem = cart.find(item => item.id === productId);
+  console.log(product);
+
+  if (cartItem) {
+      cartItem.quantity++;
+  } else {
+      cart.push({ ...product, quantity: 1 });
+  }
+  saveCart();
+  Swal.fire('Producto agregado', `${product.name} ha sido agregado al carrito`, 'success');
+}
+
+// Función para guardar el carrito en localStorage
+function saveCart() {
+  localStorage.setItem('cart', JSON.stringify(cart));
+  updateCartIndicator();
+}
+
+// Función para mostrar el indicador del carrito
+function updateCartIndicator() {
+  if (cart.length > 0) {
+      $("#cart-indicator").show();
+  } else {
+      $("#cart-indicator").hide();
+  }
+}
+
+
+
+//**
+
 
 
   // Inicialización de la tienda
 $(document).ready(function() {
+
     loadServices(); // Cargar los servicios al iniciar la página
+
+    updateCartIndicator();
+
+    $("#view-cart").on("click", function() {
+      displayCart();
+    });
+
+    $("#cart-indicator").on("click", function() {
+      displayCart();
+    });
+
 });
   
