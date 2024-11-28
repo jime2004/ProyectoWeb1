@@ -36,6 +36,7 @@ function displayServices(services) {
                         <p class="card-text">${service.description}</p>
                         <p class="price">$${service.price.toFixed(2)}</p>
                         <button class="btn btn-primary w-100" onclick="addToCart(${service.id})">Agregar al Carrito</button>
+                        <button class="btn btn-info" onclick="showProductDetails(${service.id})">Detalles</button>
                     </div>
                 </div>
             </div>
@@ -77,6 +78,30 @@ function filterServices(category) {
     // Mostrar los servicios ordenados
     displayServices(filteredServices);
   }
+
+
+
+  function showProductDetails(productId) {
+    fetch('servicios.json')
+        .then(response => response.json())
+        .then(products => {
+            const product = products.find(p => p.id === productId);
+            if (product) {
+                // Actualizar los elementos del modal
+                document.getElementById('productImage').src = product.image || 'img/default.jpg';
+                document.getElementById('productName').textContent = product.name;
+                document.getElementById('productDescription').textContent = product.description || 'No disponible';
+                document.getElementById('productPrice').textContent = `$${product.price.toFixed(2)}`;
+                document.getElementById('productCategory').textContent = product.category || 'General';
+
+                // Mostrar el modal
+                const productModal = new bootstrap.Modal(document.getElementById('productModal'));
+                productModal.show();
+            }
+        })
+        .catch(error => console.error('Error al cargar detalles del producto:', error));
+}
+
 
 
   // Inicialización de la tienda

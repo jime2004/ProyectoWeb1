@@ -257,6 +257,35 @@ main{
   margin-bottom: 1rem;
 }
 
+.modal-content {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.custom-modal-header {
+  background-color: var(--verdeOscuro); 
+  color: #ffffff; 
+}
+
+.custom-modal-header .modal-title {
+  color: #ffffff; /* También puedes definir el color específico del título */
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+
+.modal-body img {
+  max-height: 300px;
+  object-fit: cover;
+}
+
+#addToCartButton {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+
 /* Banner Section */
 .banner {
   width: 100vw;

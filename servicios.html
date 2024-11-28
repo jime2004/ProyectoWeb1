@@ -134,6 +134,38 @@
     </div>
 </footer>
 
+<!-- Modal para mostrar detalles del producto -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header custom-modal-header">
+              <h5 class="modal-title" id="productModalLabel">Detalles del Producto</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div class="row">
+                  <div class="col-md-6 text-center">
+                      <img id="productImage" src="" alt="Producto" class="img-fluid rounded shadow">
+                  </div>
+                  <div class="col-md-6">
+                      <h4 id="productName" class="fw-bold" style="padding-top: 10px;"></h4>
+                      <p id="productDescription" class="text-muted"></p>
+                      <p><strong>Precio:</strong> <span id="productPrice" class="text-success"></span></p>
+                      <p><strong>Categoría:</strong> <span id="productCategory"></span></p>
+                      <button class="btn btn-primary w-100 mt-3" id="addToCartButton">
+                          <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                      </button>
+                  </div>
+              </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+
 </body>
 </html>
 
