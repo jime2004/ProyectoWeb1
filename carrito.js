@@ -1,5 +1,6 @@
 let services = [];
-let cart = [];
+// Carrito de compras almacenado en localStorage
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 // Función para cargar servicios desde JSON
 function loadServices() {
@@ -76,9 +77,10 @@ function filterServices(category) {
     // Mostrar los servicios ordenados
     displayServices(filteredServices);
   }
-  
 
-// Inicialización de la tienda
+
+  // Inicialización de la tienda
 $(document).ready(function() {
     loadServices(); // Cargar los servicios al iniciar la página
 });
+  
