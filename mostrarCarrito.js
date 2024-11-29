@@ -43,7 +43,7 @@ function displayCart() {
             <table class="table table-bordered" id="cart-table">
                 <thead>
                     <tr>
-                        <th>Producto</th>
+                        <th>Paquete</th>
                         <th>Precio</th>
                         <th>Cantidad</th>
                         <th>Subtotal</th>
@@ -167,6 +167,45 @@ function updateQuantity(productId, quantity) {
         displayCart();
     }
 }
+
+// Variable para rastrear si el descuento ya fue aplicado
+let discountApplied = false;
+
+// Función para aplicar el código promocional
+function applyPromoCode() {
+    const promoInput = $("#promo-code").val().trim(); // Leer el valor ingresado
+    const discountCode = "BFRIDAY"; // Código válido
+    const totalPriceElement = $("#total-price"); // Elemento que muestra el total
+    let total = parseFloat(totalPriceElement.text()); // Obtener el total actual como número
+
+    // Verificar si el descuento ya fue aplicado
+    if (discountApplied) {
+        Swal.fire('Descuento ya aplicado.', 'Ya un codigo fue ingresado anteriormente', 'info');
+        $("#promo-code").val("");
+        return;
+    }
+
+    // Verificar si el código ingresado es correcto
+    if (promoInput === discountCode) {
+        const discount = total * 0.1; // Calcular el 10% de descuento
+        total -= discount; // Restar el descuento del total
+        totalPriceElement.text(total.toFixed(2)); // Actualizar el total en el carrito
+
+        // Actualizar la bandera para evitar múltiples aplicaciones
+        discountApplied = true;
+
+        // Limpiar el campo del código promocional
+        $("#promo-code").val("");
+
+        // Mostrar un mensaje de éxito
+        Swal.fire('¡Código promocional aplicado!', `Se ha descontado un 10% del total.`, 'success');
+    } else {
+        // Si el código no es válido
+        Swal.fire('Código promocional inválido', ` Por favor, inténtalo de nuevo.`, 'error');
+        $("#promo-code").val("");     
+    }
+}
+
 
 // Eventos de carga inicial
 $(document).ready(() => {

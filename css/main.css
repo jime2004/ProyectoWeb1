@@ -151,11 +151,13 @@ nav {
 
 .carousel-caption h1 {
   font-size: 7vw; /* El tamaño del texto cambia según el ancho de la ventana */
+  font-family: "Poppins";
   font-weight: 600;
 }
 
 .carousel-caption p {
   font-size: 2vw; /* Ajusta el tamaño del subtítulo */
+  font-family: "Poppins";
 }
 
 .custom-arrow {
