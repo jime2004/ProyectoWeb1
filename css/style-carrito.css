@@ -215,6 +215,7 @@ button:hover {
   font-size: 0.9rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-family: "Poppins";
 }
 
 .remove-btn:hover {
@@ -539,34 +540,16 @@ footer {
   }
 }
 
-.cart-icon {
-  position: relative;
-  display: inline-block;
-}
-
-.cart-badge {
-  position: absolute;
-  top: -5px;
-  right: -10px;
-  background-color: #e75050;
-  color: white;
-  border-radius: 100%;
-  padding: 5px 8px;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 1;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  display: none; /* Inicialmente oculto */
-  align-items: center;
-  justify-content: center;
-}
-
+/* Estilo base para el contenedor */
 .continue-shopping {
-  text-align: center;
+  text-align: right; /* Alineamos a la derecha en pantallas grandes */
   margin-top: 20px;
+  margin-right: 260px; /* Márgenes grandes para pantallas grandes */
 }
 
+/* Estilo del botón */
 .continue-shopping .btn {
+  font-family: "Poppins";
   background-color: #6d6d6d; /* Azul formal y profesional */
   color: white;
   font-size: 16px;
@@ -574,10 +557,32 @@ footer {
   border: none;
   border-radius: 5px;
   text-decoration: none;
+  font-weight: 500;
 }
 
+/* Hover del botón */
 .continue-shopping .btn:hover {
   background-color: #5a5a5a; /* Un tono más oscuro para el hover */
   cursor: pointer;
 }
+
+.continue-shopping .btn i {
+  margin-right: 2px; /* Espacio entre la flecha y el texto */
+}
+
+@media (max-width: 768px) {
+  .continue-shopping {
+    margin-right: 20px; /* Reducimos el margen a 20px */
+    text-align: right; /* Alineamos el botón a la derecha en tabletas */
+  }
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 576px) {
+  .continue-shopping {
+    margin-right: 10px; /* Aún más pequeño en móviles */
+    text-align: right; /* Alineamos a la derecha en móviles */
+  }
+}
+
 
