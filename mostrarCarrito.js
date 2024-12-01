@@ -163,10 +163,17 @@ function simulatePayment() {
 // Función para actualizar la cantidad de productos
 function updateQuantity(productId, quantity) {
     const cartItem = cart.find(item => item.id === productId);
+    
     if (cartItem) {
-        cartItem.quantity = parseInt(quantity);
-        saveCart();
-        displayCart();
+        const newQuantity = parseInt(quantity);
+
+        if (newQuantity === 0) {
+            removeFromCart(productId); 
+        } else {
+            cartItem.quantity = newQuantity;
+            saveCart();
+            displayCart();
+        }
     }
 }
 
@@ -236,7 +243,7 @@ function generatePDF() {
     // Agregar el número de factura
     doc.text(`Factura Número: ${invoiceNumber}`, 105, 30, null, null, 'center'); // Centrado horizontalmente
 // Verificar el nombre del cliente y asignar "Contado" si está vacío
-    const customerNameDisplay = customerName.trim() === "" ? "   " : customerName;
+    const customerNameDisplay = customerName.trim() == "" ? "*Sin nombre*" : customerName;
 
     doc.text(`Nombre del Cliente: ${customerNameDisplay}`, 14, 40); // Posición vertical después del número de factura
 
@@ -257,7 +264,7 @@ function generatePDF() {
     doc.text("Subtotal", 150, y + 7);
     doc.setTextColor(0, 0, 0); // Restablecer el color del texto a negro
     y += rowHeight;
-
+    const maxWidth = 180;
     // Detalles de los productos
     cart.forEach(item => {
         const subtotal = item.price * item.quantity;
