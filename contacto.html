@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="indicadorCarrito.js"></script>
     <script defer src="mapa.js"></script>
 
     <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${
@@ -63,9 +65,10 @@
           </div>
         </div>
         <div class="cart-icon">
-            <a href="carrito.html">
+            <a href="carrito.html" id="view-cart"> 
                 <img src="img/carrito-de-compras.png" alt="Carrito" width="30" height="30">
             </a>
+            <a class="nav-link" id="cart-indicator" href="carrito.html" style="display: none;">¡Pagar!</a>
         </div>
       </nav>
 </header>
