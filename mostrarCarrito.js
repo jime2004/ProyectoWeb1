@@ -35,6 +35,8 @@ function displayCart() {
             <div class="form-group">
                 <label for="customer-name">Nombre del Cliente:</label>
                 <input type="text" id="customer-name" class="form-control" placeholder="Ingresa tu nombre" oninput="customerName = this.value">
+                
+            <br>
             </div>
         `);
 
@@ -47,7 +49,7 @@ function displayCart() {
                         <th>Precio</th>
                         <th>Cantidad</th>
                         <th>Subtotal</th>
-                        <th>Acciones</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody></tbody>
@@ -76,7 +78,7 @@ function displayCart() {
                 </td>
                 <td>$${subtotal.toFixed(2)}</td>
                 <td>
-                    <button class="btn btn-danger btn-sm" onclick="removeFromCart(${item.id})">Eliminar</button>
+                    <button class="btn btn-danger btn-sm" onclick="removeFromCart(${item.id})"><i class="fas fa-trash"></i> Eliminar</button>
                 </td>
             </tr>
         `);
@@ -205,6 +207,93 @@ function applyPromoCode() {
         $("#promo-code").val("");     
     }
 }
+
+// Función para generar un PDF del contenido del carrito
+function generatePDF() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    
+    // Generar la fecha y hora actual en el formato especificado
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0'); // Asegurar que el mes tenga dos dígitos
+    const day = String(now.getDate()).padStart(2, '0'); // Asegurar que el día tenga dos dígitos
+    const hours = String(now.getHours()).padStart(2, '0'); // Asegurar que la hora tenga dos dígitos
+    const minutes = String(now.getMinutes()).padStart(2, '0'); // Asegurar que los minutos tengan dos dígitos
+    const seconds = String(now.getSeconds()).padStart(2, '0'); // Asegurar que los segundos tengan dos dígitos
+    const milliseconds = String(now.getMilliseconds()).padStart(3, '0'); // Asegurar que los milisegundos tengan tres dígitos
+
+    const invoiceNumber = `${year}${month}${day}${hours}${minutes}${seconds}${milliseconds}`;
+
+    doc.setFontSize(20);
+    doc.setTextColor(143, 169, 109 ); // Color
+    doc.setFont("helvetica", "bold"); // Establecer fuente en negrita
+    doc.text("Factura de Compra", 105, 20, null, null, 'center'); // Centrado horizontalmente
+    doc.setTextColor(0, 0, 0); // Color negro
+    doc.setFont("helvetica", "normal"); // Establecer fuente normal
+    doc.setFontSize(12);
+
+    // Agregar el número de factura
+    doc.text(`Factura Número: ${invoiceNumber}`, 105, 30, null, null, 'center'); // Centrado horizontalmente
+// Verificar el nombre del cliente y asignar "Contado" si está vacío
+    const customerNameDisplay = customerName.trim() === "" ? "   " : customerName;
+
+    doc.text(`Nombre del Cliente: ${customerNameDisplay}`, 14, 40); // Posición vertical después del número de factura
+
+    let y = 45; // posición vertical inicial
+    let total = 0;
+
+    // Definir el ancho de la tabla y la altura de las filas
+    const tableWidth = 180;
+    const rowHeight = 10;
+
+    // Cabecera de la tabla
+    doc.setFillColor(143, 169, 109 ); // Color azul
+    doc.rect(14, y, tableWidth, rowHeight, 'F'); // Fondo de la cabecera
+    doc.setTextColor(255, 255, 255); // Texto blanco
+    doc.text("Producto", 15, y + 7);
+    doc.text("Precio", 80, y + 7);
+    doc.text("Cantidad", 120, y + 7);
+    doc.text("Subtotal", 150, y + 7);
+    doc.setTextColor(0, 0, 0); // Restablecer el color del texto a negro
+    y += rowHeight;
+
+    // Detalles de los productos
+    cart.forEach(item => {
+        const subtotal = item.price * item.quantity;
+        doc.rect(14, y, tableWidth, rowHeight); // Bordes de la fila
+        doc.text(item.name, 15, y + 7);
+        doc.text(`$${item.price.toFixed(2)}`, 80, y + 7);
+        doc.text(item.quantity.toString(), 120, y + 7);
+        doc.text(`$${subtotal.toFixed(2)}`, 150, y + 7);
+        y += rowHeight; // Incremento para la siguiente línea
+        total += subtotal;
+    });
+
+    // Total
+    doc.setFillColor(211, 211, 211); // Color gris
+    doc.rect(14, y, tableWidth, rowHeight, 'F'); // Fondo del total
+    doc.setTextColor(0, 0, 0); // Texto negro
+    doc.text("Total:", 15, y + 7);
+    doc.text(`$${total.toFixed(2)}`, 150, y + 7);
+    
+    // Información adicional (pie de página)
+    y += rowHeight + 5;
+    doc.setFontSize(10);
+    doc.setTextColor(128, 128, 128); // Gris claro
+    doc.text("Gracias por elegir nuestros servicios. ¡Esperamos verte pronto!", 14, y);
+
+    // Agregar número de página
+    const pageCount = doc.internal.getNumberOfPages();
+    for (let i = 1; i <= pageCount; i++) {
+        doc.setPage(i); // Establecer la página actual
+        doc.text(`Página ${i} de ${pageCount}`, 190, 285, null, null, 'right'); // Añadir número de página
+    }
+
+
+    doc.save('factura_compra.pdf');
+}
+
 
 
 // Eventos de carga inicial

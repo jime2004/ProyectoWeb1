@@ -133,6 +133,10 @@ nav {
   padding: 20px;
 }
 
+.text-center{
+  font-weight: 600;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -555,4 +559,24 @@ footer {
   display: none; /* Inicialmente oculto */
   align-items: center;
   justify-content: center;
+}
+
+.continue-shopping {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.continue-shopping .btn {
+  background-color: #6d6d6d; /* Azul formal y profesional */
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.continue-shopping .btn:hover {
+  background-color: #5a5a5a; /* Un tono más oscuro para el hover */
+  cursor: pointer;
 }
