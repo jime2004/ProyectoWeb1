@@ -123,9 +123,10 @@ nav {
   }
   .cart-icon {
     position: absolute; /* Posición absoluta para mover el carrito */ 
-    top: 7px; /* Alineado con la parte superior del navbar */
+    top: 27px; /* Alineado con la parte superior del navbar */
     right: 11px; /* Ajusta la distancia a la izquierda del botón de menú */
   }
+
 
   .navbar-toggler {
     position: relative; /* Mantén el botón de menú en su lugar */
@@ -154,7 +155,6 @@ nav {
   display: inline-block;
   vertical-align: middle;
 }
-
 
 .text-section {
   width: 100%;
@@ -345,24 +345,4 @@ p {
   margin-top: 2rem;
 }
 
-.cart-icon {
-  position: relative;
-  display: inline-block;
-}
 
-.cart-badge {
-  position: absolute;
-  top: -5px;
-  right: -10px;
-  background-color: #e75050;
-  color: white;
-  border-radius: 100%;
-  padding: 5px 8px;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 1;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  display: none; /* Inicialmente oculto */
-  align-items: center;
-  justify-content: center;
-}

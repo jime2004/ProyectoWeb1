@@ -377,25 +377,4 @@ footer {
   }
 }
 
-.cart-icon {
-  position: relative;
-  display: inline-block;
-}
-
-.cart-badge {
-  position: absolute;
-  top: -5px;
-  right: -10px;
-  background-color: #e75050;
-  color: white;
-  border-radius: 100%;
-  padding: 5px 8px;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 1;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  display: none; /* Inicialmente oculto */
-  align-items: center;
-  justify-content: center;
-}
 

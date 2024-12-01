@@ -34,7 +34,7 @@ function displayCart() {
         content.append(`
             <div class="form-group">
                 <label for="customer-name">Nombre del Cliente:</label>
-                <input type="text" id="customer-name" class="form-control" placeholder="Ingresa tu nombre" oninput="customerName = this.value">
+                <input type="text" id="customer-name" class="form-control" placeholder="Ingresa tu nombre" value="*Sin Nombre*" oninput="customerName = this.value">
                 
             <br>
             </div>
@@ -103,10 +103,19 @@ function removeFromCart(productId) {
 
 // Función para mostrar el indicador del carrito
 function updateCartIndicator() {
-    if (cart.length > 0) {
-        $("#cart-indicator").show();
+    const cartBadge = document.getElementById("cart-indicator");
+    const cartIndicator = document.getElementById("cart-indicator");
+  
+    // Calcula el total de productos (incluyendo cantidades)
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+  
+    if (totalItems > 0) {
+        cartIndicator.style.display = "inline"; // Muestra el indicador si hay productos
+        cartBadge.style.display = "flex"; // Muestra el badge
+        cartBadge.textContent = totalItems; // Muestra el total de artículos en el badge
     } else {
-        $("#cart-indicator").hide();
+        cartIndicator.style.display = "none"; // Oculta el indicador si no hay productos
+        cartBadge.style.display = "none"; // Oculta el badge
     }
   }
 
@@ -243,7 +252,7 @@ function generatePDF() {
     // Agregar el número de factura
     doc.text(`Factura Número: ${invoiceNumber}`, 105, 30, null, null, 'center'); // Centrado horizontalmente
 // Verificar el nombre del cliente y asignar "Contado" si está vacío
-    const customerNameDisplay = customerName.trim() == "" ? "*Sin nombre*" : customerName;
+    const customerNameDisplay = customerName.trim() == "" ? "*Sin Nombre*" : customerName;
 
     doc.text(`Nombre del Cliente: ${customerNameDisplay}`, 14, 40); // Posición vertical después del número de factura
 

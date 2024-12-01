@@ -55,10 +55,16 @@
           </div>
         </div>
         <div class="cart-icon">
-            <a href="carrito.html">
-                <img src="img/carrito-de-compras.png" alt="Carrito" width="30" height="30">
-            </a>
-        </div>
+          <a href="carrito.html" id="view-cart" class="position-relative">
+              <!-- Icono del carrito -->
+              <img src="img/carrito-de-compras.png" alt="Carrito" width="30" height="30">
+              
+              <!-- Badge de la cantidad de productos en el carrito -->
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-indicator" style="display: none;">
+                  0
+              </span>
+          </a>
+      </div>
       </nav>
 </header>
   <main>
