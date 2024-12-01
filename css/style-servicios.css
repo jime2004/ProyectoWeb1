@@ -85,8 +85,6 @@ body, html {
   }
 }
 
-
-
 header {
   background-color: var(--blanco);
   position: fixed;
@@ -163,18 +161,18 @@ nav {
     gap: 15px; 
   }
   .cart-icon {
-    position: absolute; /* Posición absoluta para mover el carrito */ 
-    top: 27px; /* Alineado con la parte superior del navbar */
-    right: 11px; /* Ajusta la distancia a la izquierda del botón de menú */
+    position: absolute; 
+    top: 27px; 
+    right: 11px;
   }
 
   .navbar-toggler {
-    position: relative; /* Mantén el botón de menú en su lugar */
-    z-index: 1; /* Asegura que el botón esté encima del carrito */
+    position: relative; 
+    z-index: 1;
   }
 
   .container-fluid {
-    position: relative; /* Asegura que el carrito se posicione correctamente dentro del contenedor */
+    position: relative; 
   }
 }
 
@@ -335,6 +333,27 @@ main{
   padding: 0;
 }
 
+.cart-icon {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: #e75050;
+  color: white;
+  border-radius: 100%;
+  padding: 5px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  display: none; /* Inicialmente oculto */
+  align-items: center;
+  justify-content: center;
+}
 
 /* Estilos del footer */
 footer {

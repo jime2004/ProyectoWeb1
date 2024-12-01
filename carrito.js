@@ -143,10 +143,19 @@ function addToCartFromModal() {
 
 // Función para mostrar el indicador del carrito
 function updateCartIndicator() {
-  if (cart.length > 0) {
-      $("#cart-indicator").show();
+  const cartBadge = document.getElementById("cart-badge");
+  const cartIndicator = document.getElementById("cart-indicator");
+
+  // Calcula el total de productos (incluyendo cantidades)
+  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+  if (totalItems > 0) {
+      cartIndicator.style.display = "inline";
+      cartBadge.style.display = "flex";
+      cartBadge.textContent = totalItems; // Muestra el total de artículos en el badge
   } else {
-      $("#cart-indicator").hide();
+      cartIndicator.style.display = "none";
+      cartBadge.style.display = "none";
   }
 }
 
