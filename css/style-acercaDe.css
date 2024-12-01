@@ -98,7 +98,32 @@ nav {
   }
   .cart-icon {
     position: absolute; /* Posición absoluta para mover el carrito */ 
-    top: 27px; /* Alineado con la parte superior del navbar */
+    top: 7px; /* Alineado con la parte superior del navbar */
+    right: 11px; /* Ajusta la distancia a la izquierda del botón de menú */
+  }
+
+  .navbar-toggler {
+    position: relative; /* Mantén el botón de menú en su lugar */
+    z-index: 1; /* Asegura que el botón esté encima del carrito */
+  }
+
+  .container-fluid {
+    position: relative; /* Asegura que el carrito se posicione correctamente dentro del contenedor */
+  }
+}
+
+@media (max-width: 993px) {
+  .container {
+    flex-direction: column;
+  }
+  nav ul {
+    flex-direction: column; 
+    align-items: center; 
+    gap: 15px; 
+  }
+  .cart-icon {
+    position: absolute; /* Posición absoluta para mover el carrito */ 
+    top: 7px; /* Alineado con la parte superior del navbar */
     right: 11px; /* Ajusta la distancia a la izquierda del botón de menú */
   }
 
@@ -250,6 +275,7 @@ p {
   .text-section h2 {
     font-size: 1.5rem; 
   }
+
 }
 
 /* Banner Section */
@@ -340,4 +366,3 @@ p {
   align-items: center;
   justify-content: center;
 }
-

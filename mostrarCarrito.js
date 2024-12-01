@@ -56,8 +56,8 @@ function displayCart() {
             </table>
         </div>
         <h4>Total: $<span id="total-price">0.00</span></h4>
-        <button class="btn btn-success" onclick="generatePDF()">Imprimir Factura</button>
-        <button class="btn btn-success" onclick="simulatePayment()">Pagar</button>
+        <button class="btn btn-success" onclick="generatePDF()"><i class="fa fa-print "></i> Imprimir Factura</button>
+        <button class="btn btn-success" onclick="simulatePayment()"><i class="fa fa-credit-card"></i> Pagar</button>
     `;
 
     content.append(cartTable);
