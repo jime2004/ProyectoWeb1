@@ -568,6 +568,11 @@ nav {
   max-width: 100%;
   height: 350px;
   border-radius: 1%;
+  transition: transform 0.3s;
+}
+
+.imagen img:hover {
+  transform: translateY(-10px);
 }
 
 /* Responsivo: cuando la pantalla es pequeña */
@@ -593,6 +598,7 @@ nav {
 
   .imagen img {
     height: 300px; /* Ajustar el tamaño de la imagen */
+    margin-bottom: 4rem;
   }
 }
 
@@ -618,6 +624,93 @@ nav {
   }
 
   .imagen img {
+    height: 250px; /* Reducir el tamaño de la imagen */
+    margin-top: 2rem; /* Asegurar espacio entre el texto y la imagen */
+    margin-bottom: 4rem;
+  }
+}
+/*Sección de Información 2*/
+.informacion2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem;
+  background-color: #ffffff;
+  margin-top: 3rem;
+  flex-wrap: wrap; /* Permite que los elementos se acomoden en varias líneas si es necesario */
+}
+
+.texto2 {
+  max-width: 50%;
+}
+
+.texto2 h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.texto2 p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.imagen2 img {
+  max-width: 100%;
+  height: 350px;
+  border-radius: 1%;
+}
+
+/* Responsivo: cuando la pantalla es pequeña */
+@media (max-width: 1224px) {
+  .informacion2 {
+    padding: 3rem; /* Reducir el padding en pantallas medianas */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+    text-align: center; /* Centrar el texto */
+    flex-direction: column; /* Cambiar la dirección de los elementos a columna */
+  }
+
+  .texto2 {
+    max-width: 60%;
+    margin-top: 1rem;
+  }
+
+  .texto2 h1 {
+    font-size: 2rem; /* Reducir el tamaño de la fuente en pantallas medianas */
+  }
+
+  .texto2 p {
+    font-size: 1.1rem; /* Reducir ligeramente el tamaño del texto */
+  }
+
+  .imagen2 img {
+    height: 300px; /* Ajustar el tamaño de la imagen */
+  }
+}
+
+@media (max-width: 768px) {
+  .informacion2 {
+    padding: 2rem; /* Reducir el padding aún más en pantallas pequeñas */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+    text-align: center; /* Centrar el texto */
+    flex-direction: column; /* Cambiar la dirección de los elementos a columna */
+  }
+
+  .texto2 {
+    max-width: 100%; /* Hacer que el texto ocupe todo el ancho */
+    margin-bottom: 2rem; /* Añadir un margen en la parte inferior */
+    margin-top: 1rem;
+  }
+
+  .texto2 h1 {
+    font-size: 1.8rem; /* Ajustar el tamaño de la fuente */
+  }
+
+  .texto2 p {
+    font-size: 1rem; /* Reducir el tamaño del párrafo */
+  }
+
+  .imagen2 img {
     height: 250px; /* Reducir el tamaño de la imagen */
     margin-top: 2rem; /* Asegurar espacio entre el texto y la imagen */
   }

@@ -28,15 +28,13 @@ function displayServices(services) {
       serviceContainer.append(`
           <div class="col-6 col-md-4 col-lg-3 mb-4"  data-etiquetas="${service.category}">
               <div class="card h-100 shadow-sm">
-                  <a href="vacaciones-perfectas.html">
-                      <img src="${service.image}" class="card-img-top" alt="${service.name}">
-                  </a>
+                  <img src="${service.image}" class="card-img-top" alt="${service.name}" onclick="showProductDetails(${service.id})">
                   <div class="card-body">
                       <h5 class="card-title">${service.name}</h5>
                       <p class="card-text">${service.description}</p>
                       <p class="price">$${service.price.toFixed(2)}</p>
                       <div class="d-flex justify-content-between">
-                          <button class="btn btn-primary me-2" onclick="addToCart(${service.id})" >Agregar al Carrito</button>
+                          <button class="btn btn-primary me-2" onclick="addToCart(${service.id})" ><i class="fas fa-cart-plus"></i> Agregar al carrito</button>
                           <button class="btn btn-secondary" onclick="showProductDetails(${service.id})">Detalles</button>
                       </div>
                   </div>

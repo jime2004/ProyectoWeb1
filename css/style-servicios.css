@@ -236,12 +236,13 @@ main{
 }
 
 .btn-primary{
-  background-color: #48924b !important;
-  border-color: #8fa96d !important;
+  background-color: #768f55 !important;
+  border-color: #718d4c !important;
+  font-size: 0.91rem !important;
 }
 
 .btn-primary:hover{
-  background-color: #377039 !important;
+  background-color: #8fa96d !important;
 }
 
 .btn {
@@ -249,8 +250,14 @@ main{
   transition: opacity 0.3s ease;
 }
 
-
-
+.btn-secondary{
+  background-color: var(--cafe) !important;
+  border-color: var(--cafe) !important;
+  font-size: 0.91rem !important;
+}
+.btn-secondary:hover{
+  background-color: #8b785e  !important;
+}
 
 .card:hover .btn {
   opacity: 1;

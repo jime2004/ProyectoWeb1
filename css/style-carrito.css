@@ -182,21 +182,6 @@ img {
   color: #007bff;
 }
 
-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 20px;
-  background-color: #007bff;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
 .quantity-btn {
   border: 1px solid #ddd;
   background: #f9f9f9;
@@ -465,6 +450,7 @@ footer {
   flex-wrap: wrap;
   padding-left: 200px;
   padding-right: 200px;
+  margin-top: 6rem;
 }
 
 .footer-logo {
@@ -522,7 +508,6 @@ footer {
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
-    margin-top: 6rem;
   }
 
   .footer-logo {
@@ -554,7 +539,7 @@ footer {
 /* Estilo del botón */
 .continue-shopping .btn {
   font-family: "Poppins";
-  background-color: #6d6d6d; /* Azul formal y profesional */
+  background-color: #6d6d6d !important; /* Azul formal y profesional */
   color: white;
   font-size: 16px;
   padding: 10px 20px;
@@ -566,7 +551,7 @@ footer {
 
 /* Hover del botón */
 .continue-shopping .btn:hover {
-  background-color: #5a5a5a; /* Un tono más oscuro para el hover */
+  background-color: #5a5a5a !important; /* Un tono más oscuro para el hover */
   cursor: pointer;
 }
 
@@ -589,4 +574,12 @@ footer {
   }
 }
 
+.btn-success{
+  background-color: #768f55 !important;
+  border-color: #cadeb1 !important;
+  font-size: 0.91rem !important;
+}
 
+.btn-success:hover{
+  background-color: #8fa96d !important;
+}
