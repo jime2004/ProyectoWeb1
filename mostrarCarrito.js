@@ -125,10 +125,14 @@ function simulatePayment() {
     const today = new Date();
     const todayString = today.toISOString().split("T")[0]; // Convertir a formato de fecha
 
+    //oninput="this.value=this.value.replace(/[^0-9]/g,'')"
+
     Swal.fire({
         title: 'Pagar',
         html: `
-            <input id="card-number" type="text" class="swal2-input" placeholder="Número de tarjeta" maxlength="16" oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+            <input id="card-number" type="text" class="swal2-input" placeholder="Número de tarjeta" maxlength="16" oninput="getCreditCardType(event)"> 
+            <img src="./img/visa.png" alt="" id="visa" class="img-tarjeta" style="display: none;">
+            <img src="./img/mastercard.png" alt="" id="mastercard" class="img-tarjeta" style="display: none;">
             <input id="expiry-date" type="date" class="swal2-input" placeholder="Fecha de Vencimiento" min="${todayString}">
             <input id="card-name" type="text" class="swal2-input" placeholder="Nombre en la tarjeta">
         `,
@@ -310,6 +314,40 @@ function generatePDF() {
     doc.save('factura_compra.pdf');
 }
 
+//**
+
+function getCreditCardType(event) {
+
+    var accountNumber = document.getElementById("card-number").value;
+
+    const imgvisa = document.getElementById('visa');
+    const imgmaster = document.getElementById('mastercard');
+
+    var cardReaderVisa = {
+        "visa": /^4/
+    };
+
+    var cardReaderMaster = {
+        "mastercard": /^5[1-5]/
+    };
+
+    imgvisa.style.display = 'none';
+    imgmaster.style.display = 'none';
+
+    for(var card in cardReaderVisa){
+        if(cardReaderVisa[card].test(accountNumber)){
+            imgvisa.style.display = 'inline';
+        }
+    }
+
+    for(var card in cardReaderMaster){
+        if(cardReaderMaster[card].test(accountNumber)){
+            imgmaster.style.display = 'inline';
+        }
+    }
+
+}
+
 
 
 // Eventos de carga inicial
@@ -317,4 +355,10 @@ $(document).ready(() => {
     loadServices();
     updateCartIndicator();
     displayCart();
+
+    //const inputElement = document.getElementById('card-number');
+    //inputElement.addEventListener('card-number', getCreditCardType);
+
+    //document.getElementById("card-number").addEventListener('keyup',getCreditCardType);
+
 });

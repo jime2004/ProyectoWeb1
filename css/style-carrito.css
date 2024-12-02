@@ -158,6 +158,10 @@ img {
   border-radius: 10px;
 }
 
+.img-tarjeta {
+  max-width: 60px;
+}
+
 .cart-summary {
   display: flex;
   justify-content: space-between;
