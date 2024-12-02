@@ -160,6 +160,7 @@ img {
 
 .img-tarjeta {
   max-width: 60px;
+  border-radius: 0px;
 }
 
 .cart-summary {

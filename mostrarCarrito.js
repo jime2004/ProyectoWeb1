@@ -131,8 +131,8 @@ function simulatePayment() {
         title: 'Pagar',
         html: `
             <input id="card-number" type="text" class="swal2-input" placeholder="Número de tarjeta" maxlength="16" oninput="getCreditCardType(event)"> 
-            <img src="./img/visa.png" alt="" id="visa" class="img-tarjeta" style="display: none;">
-            <img src="./img/mastercard.png" alt="" id="mastercard" class="img-tarjeta" style="display: none;">
+            <img src="./img/VisaLogo.png" alt="" id="visa" class="img-tarjeta" style="display: none;">
+            <img src="./img/MastercardLogo.png" alt="" id="mastercard" class="img-tarjeta" style="display: none;">
             <input id="expiry-date" type="date" class="swal2-input" placeholder="Fecha de Vencimiento" min="${todayString}">
             <input id="card-name" type="text" class="swal2-input" placeholder="Nombre en la tarjeta">
         `,
