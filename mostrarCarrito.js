@@ -11,7 +11,7 @@ function loadServices() {
             return response.json();
         })
         .then(data => {
-            services = data; 
+            services = data;
         })
         .catch(error => {
             Swal.fire('Error', 'Hubo un problema con la carga de servicios: ' + error.message, 'error');
@@ -30,8 +30,8 @@ function displayCart() {
 
     content.append('<h1 class="text-center">Carrito de Compras</h1>');
 
-        // Agregar campo para el nombre del cliente
-        content.append(`
+    //campo para el nombre del cliente
+    content.append(`
             <div class="form-group">
                 <label for="customer-name">Nombre del Cliente:</label>
                 <input type="text" id="customer-name" class="form-control" placeholder="Ingresa tu nombre" value="*Sin Nombre*" oninput="customerName = this.value">
@@ -91,7 +91,7 @@ function displayCart() {
 function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartIndicator();
-  }
+}
 
 // Función para eliminar un producto del carrito
 function removeFromCart(productId) {
@@ -105,10 +105,10 @@ function removeFromCart(productId) {
 function updateCartIndicator() {
     const cartBadge = document.getElementById("cart-indicator");
     const cartIndicator = document.getElementById("cart-indicator");
-  
+
     // Calcula el total de productos (incluyendo cantidades)
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-  
+
     if (totalItems > 0) {
         cartIndicator.style.display = "inline"; // Muestra el indicador si hay productos
         cartBadge.style.display = "flex"; // Muestra el badge
@@ -117,15 +117,13 @@ function updateCartIndicator() {
         cartIndicator.style.display = "none"; // Oculta el indicador si no hay productos
         cartBadge.style.display = "none"; // Oculta el badge
     }
-  }
+}
 
 // Función para simular el pago
 function simulatePayment() {
     // Obtener la fecha actual en formato YYYY-MM-DD
     const today = new Date();
     const todayString = today.toISOString().split("T")[0]; // Convertir a formato de fecha
-
-    //oninput="this.value=this.value.replace(/[^0-9]/g,'')"
 
     Swal.fire({
         title: 'Pagar',
@@ -176,12 +174,12 @@ function simulatePayment() {
 // Función para actualizar la cantidad de productos
 function updateQuantity(productId, quantity) {
     const cartItem = cart.find(item => item.id === productId);
-    
+
     if (cartItem) {
         const newQuantity = parseInt(quantity);
 
         if (newQuantity === 0) {
-            removeFromCart(productId); 
+            removeFromCart(productId);
         } else {
             cartItem.quantity = newQuantity;
             saveCart();
@@ -195,10 +193,10 @@ let discountApplied = false;
 
 // Función para aplicar el código promocional
 function applyPromoCode() {
-    const promoInput = $("#promo-code").val().trim(); // Leer el valor ingresado
+    const promoInput = $("#promo-code").val().trim(); 
     const discountCode = "BFRIDAY"; // Código válido
-    const totalPriceElement = $("#total-price"); // Elemento que muestra el total
-    let total = parseFloat(totalPriceElement.text()); // Obtener el total actual como número
+    const totalPriceElement = $("#total-price");
+    let total = parseFloat(totalPriceElement.text());
 
     // Verificar si el descuento ya fue aplicado
     if (discountApplied) {
@@ -213,7 +211,7 @@ function applyPromoCode() {
         total -= discount; // Restar el descuento del total
         totalPriceElement.text(total.toFixed(2)); // Actualizar el total en el carrito
 
-        // Actualizar la bandera para evitar múltiples aplicaciones
+        // Actualizar para evitar múltiples aplicaciones
         discountApplied = true;
 
         // Limpiar el campo del código promocional
@@ -224,7 +222,7 @@ function applyPromoCode() {
     } else {
         // Si el código no es válido
         Swal.fire('Código promocional inválido', ` Por favor, inténtalo de nuevo.`, 'error');
-        $("#promo-code").val("");     
+        $("#promo-code").val("");
     }
 }
 
@@ -232,7 +230,7 @@ function applyPromoCode() {
 function generatePDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
-    
+
     // Generar la fecha y hora actual en el formato especificado
     const now = new Date();
     const year = now.getFullYear();
@@ -246,21 +244,20 @@ function generatePDF() {
     const invoiceNumber = `${year}${month}${day}${hours}${minutes}${seconds}${milliseconds}`;
 
     doc.setFontSize(20);
-    doc.setTextColor(143, 169, 109 ); // Color
-    doc.setFont("helvetica", "bold"); // Establecer fuente en negrita
-    doc.text("Factura de Compra", 105, 20, null, null, 'center'); // Centrado horizontalmente
-    doc.setTextColor(0, 0, 0); // Color negro
-    doc.setFont("helvetica", "normal"); // Establecer fuente normal
+    doc.setTextColor(143, 169, 109);
+    doc.setFont("helvetica", "bold"); 
+    doc.text("Factura de Compra", 105, 20, null, null, 'center');
+    doc.setTextColor(0, 0, 0); 
+    doc.setFont("helvetica", "normal"); 
     doc.setFontSize(12);
 
     // Agregar el número de factura
-    doc.text(`Factura Número: ${invoiceNumber}`, 105, 30, null, null, 'center'); // Centrado horizontalmente
-// Verificar el nombre del cliente y asignar "Contado" si está vacío
+    doc.text(`Factura Número: ${invoiceNumber}`, 105, 30, null, null, 'center'); 
     const customerNameDisplay = customerName.trim() == "" ? "*Sin Nombre*" : customerName;
 
-    doc.text(`Nombre del Cliente: ${customerNameDisplay}`, 14, 40); // Posición vertical después del número de factura
+    doc.text(`Nombre del Cliente: ${customerNameDisplay}`, 14, 40); 
 
-    let y = 45; // posición vertical inicial
+    let y = 45; 
     let total = 0;
 
     // Definir el ancho de la tabla y la altura de las filas
@@ -268,16 +265,17 @@ function generatePDF() {
     const rowHeight = 10;
 
     // Cabecera de la tabla
-    doc.setFillColor(143, 169, 109 ); // Color azul
+    doc.setFillColor(143, 169, 109);
     doc.rect(14, y, tableWidth, rowHeight, 'F'); // Fondo de la cabecera
     doc.setTextColor(255, 255, 255); // Texto blanco
     doc.text("Producto", 15, y + 7);
     doc.text("Precio", 80, y + 7);
     doc.text("Cantidad", 120, y + 7);
     doc.text("Subtotal", 150, y + 7);
-    doc.setTextColor(0, 0, 0); // Restablecer el color del texto a negro
+    doc.setTextColor(0, 0, 0);
     y += rowHeight;
     const maxWidth = 180;
+
     // Detalles de los productos
     cart.forEach(item => {
         const subtotal = item.price * item.quantity;
@@ -291,16 +289,16 @@ function generatePDF() {
     });
 
     // Total
-    doc.setFillColor(211, 211, 211); // Color gris
-    doc.rect(14, y, tableWidth, rowHeight, 'F'); // Fondo del total
-    doc.setTextColor(0, 0, 0); // Texto negro
+    doc.setFillColor(211, 211, 211); 
+    doc.rect(14, y, tableWidth, rowHeight, 'F'); 
+    doc.setTextColor(0, 0, 0);
     doc.text("Total:", 15, y + 7);
     doc.text(`$${total.toFixed(2)}`, 150, y + 7);
-    
+
     // Información adicional (pie de página)
     y += rowHeight + 5;
     doc.setFontSize(10);
-    doc.setTextColor(128, 128, 128); // Gris claro
+    doc.setTextColor(128, 128, 128);
     doc.text("Gracias por elegir nuestros servicios. ¡Esperamos verte pronto!", 14, y);
 
     // Agregar número de página
@@ -334,14 +332,14 @@ function getCreditCardType(event) {
     imgvisa.style.display = 'none';
     imgmaster.style.display = 'none';
 
-    for(var card in cardReaderVisa){
-        if(cardReaderVisa[card].test(accountNumber)){
+    for (var card in cardReaderVisa) {
+        if (cardReaderVisa[card].test(accountNumber)) {
             imgvisa.style.display = 'inline';
         }
     }
 
-    for(var card in cardReaderMaster){
-        if(cardReaderMaster[card].test(accountNumber)){
+    for (var card in cardReaderMaster) {
+        if (cardReaderMaster[card].test(accountNumber)) {
             imgmaster.style.display = 'inline';
         }
     }
@@ -349,16 +347,9 @@ function getCreditCardType(event) {
 }
 
 
-
 // Eventos de carga inicial
 $(document).ready(() => {
     loadServices();
     updateCartIndicator();
     displayCart();
-
-    //const inputElement = document.getElementById('card-number');
-    //inputElement.addEventListener('card-number', getCreditCardType);
-
-    //document.getElementById("card-number").addEventListener('keyup',getCreditCardType);
-
 });
