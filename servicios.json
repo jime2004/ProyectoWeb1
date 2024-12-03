@@ -5,7 +5,12 @@
         "description": "Tour de un día en Río Celeste.",
         "price": 105.99,
         "category": "tours",
-        "image": "img/RioCeleste.jpg"
+        "image": "img/RioCeleste.jpg",
+        "image2": "img/RioCeleste_2.jpg",
+        "image3": "img/RioCeleste_3.jpg",
+        "vecesComprado": 234,
+        "rating": 4.5,
+        "descripcionDetallada": "Descubre la magia del Río Celeste en este tour para grupos de 2 a 12 personas. Explora el Parque Nacional Tenorio con una caminata guiada de 7 km, donde visitarás el famoso Teñidero y la impresionante cascada, mientras avistas fauna exótica como monos y aves tropicales. El tour incluye transporte cómodo, entrada al parque, guía experto, almuerzo típico y seguro. Ideal para los amantes de la naturaleza, esta experiencia combina paisajes únicos, tranquilidad y aventura en un solo día. ¡Reserva y vive uno de los tesoros más icónicos de Costa Rica!"
     },
     {
         "id": 2,
@@ -13,7 +18,12 @@
         "description": "Variedad de atracciones en Ponderosa Adventure Park.",
         "price": 48.00,
         "category": "tours",
-        "image": "img/Ponderosa.png"
+        "image": "img/Ponderosa.png",
+        "image2": "img/Ponderosa_2.png",
+        "image3": "img/Ponderosa_3.png",
+        "vecesComprado": 180,
+        "rating": 4.2,
+        "descripcionDetallada": "Vive una experiencia única en el Tour Safari, ideal para grupos de 4 a 20 personas. Disfruta de una aventura en Ponderosa Adventure Park, donde podrás interactuar con animales exóticos y participar en actividades de observación. El tour incluye transporte, entradas, guía especializado y almuerzo. Un día lleno de emoción, perfecto para familias y grupos de amigos. ¡No te pierdas esta experiencia cercana a la naturaleza!"
     },
     {
         "id": 3,
@@ -21,15 +31,25 @@
         "description": "El fresco del clima de Vara Blanca le espera.",
         "price": 65.99,
         "category": "tours",
-        "image": "img/la-paz-waterfals-costa-rica.jpg"
+        "image": "img/la-paz-waterfals-costa-rica.jpg",
+        "image2": "img/la-paz-waterfals-costa-rica_2.jpg",
+        "image3": "img/la-paz-waterfals-costa-rica_3.jpg",
+        "vecesComprado": 152,
+        "rating": 4.7,
+        "descripcionDetallada": "Embárcate en un tour refrescante para grupos de 3 a 15 personas. Disfruta de una caminata guiada por el Parque Cataratas La Paz, donde descubrirás increíbles cascadas, senderos llenos de vegetación y vida silvestre. Incluye transporte, entrada al parque, almuerzo típico y un guía experto. Este tour es ideal para los amantes de la naturaleza y quienes buscan desconectar con un entorno natural inigualable."
     },
     {
         "id": 4,
         "name": "Tour Isla Tortuga",
-        "description": "Disfrute de un paradisíaco  archipiélago compuesto por varias islas y playas de arenas blancas.",
+        "description": "Disfrute de un paradisíaco archipiélago compuesto por varias islas y playas de arenas blancas.",
         "price": 99.00,
         "category": "tours",
-        "image": "img/Isla-Tortuga.jpeg"
+        "image": "img/Isla-Tortuga.jpeg",
+        "image2": "img/Isla-Tortuga_2.jpeg",
+        "image3": "img/Isla-Tortuga_3.jpeg",
+        "vecesComprado": 305,
+        "rating": 3.8,
+        "descripcionDetallada": "Aventura en Isla Tortuga para grupos de 4 a 12 personas. Navega hacia este paraíso natural con playas de arena blanca y aguas cristalinas. Durante el tour disfrutarás de actividades como snorkeling, baño de sol y exploración de la isla. El paquete incluye transporte en bote, almuerzo, equipo de snorkeling y un guía experto. Perfecto para aquellos que buscan relajarse y disfrutar de un día de playa en uno de los destinos más impresionantes de Costa Rica."
     },
     {
         "id": 5,
@@ -37,7 +57,12 @@
         "description": "Uno de los destinos más visitados en el país, para realizar canopy, visitar el insectario y más.",
         "price": 49.99,
         "category": "tours",
-        "image": "img/Monteverde.jpeg"
+        "image": "img/Monteverde.jpeg",
+        "image2": "img/Monteverde_2.jpeg",
+        "image3": "img/Monteverde_3.jpeg",
+        "vecesComprado": 260,
+        "rating": 4.6,
+        "descripcionDetallada": "Explora la exuberante naturaleza de Monteverde en este tour para grupos de 2 a 10 personas. Vive la emoción del canopy, observa insectos únicos en el insectario, y recorre senderos llenos de flora y fauna tropical. El tour incluye transporte, guías especializados, entradas a las reservas, y una experiencia inolvidable en uno de los destinos más icónicos de Costa Rica. Ideal para los aventureros y los amantes del ecoturismo."
     },
     {
         "id": 6,
@@ -45,7 +70,12 @@
         "description": "En la base del Volcán Arenal, centro turístico de aguas termales.",
         "price": 135.00,
         "category": "tours",
-        "image": "img/Baldi.png"
+        "image": "img/Baldi.png",
+        "image2": "img/Baldi_2.png",
+        "image3": "img/Baldi_3.png",
+        "vecesComprado": 420,
+        "rating": 4.9,
+        "descripcionDetallada": "Sumérgete en las aguas termales del Volcán Arenal con este tour de 1 noche para grupos de 2 a 6 personas. Relájate en las piscinas naturales de Baldi Hot Springs mientras disfrutas de las vistas impresionantes al volcán. El paquete incluye transporte, entradas al complejo, alojamiento en una habitación confortable, y acceso a las aguas termales. Perfecto para una escapada romántica o un fin de semana de relax en un entorno natural único."
     },
     {
         "id": 7,
@@ -53,7 +83,12 @@
         "description": "Una playa majestuosa como lo es El Jobo en Guanacaste y un delicado servicio.",
         "price": 389.50,
         "category": "hoteles",
-        "image": "img/HotelDreams.jpg"
+        "image": "img/HotelDreams.jpg",
+        "image2": "img/HotelDreams_2.jpg",
+        "image3": "img/HotelDreams_3.jpg",
+        "vecesComprado": 310,
+        "rating": 4.5,
+        "descripcionDetallada": "Vive una experiencia de lujo en este hotel todo incluido, ideal para grupos de 2 a 6 personas. Disfruta de la belleza de El Jobo en Guanacaste, con acceso directo a playas paradisíacas. El paquete incluye alojamiento en habitaciones con vistas espectaculares, servicio todo incluido con comidas y bebidas, acceso a instalaciones como spa y piscinas, y actividades diarias para toda la familia. Un destino perfecto para descansar y disfrutar del sol costarricense."
     },
     {
         "id": 8,
@@ -61,7 +96,12 @@
         "description": "Este destino es el ideal pues está a tan solo 50 minutos de San José. Ambiente relajado rodeado, piscinas y oferta gastronómica de todo incluido.",
         "price": 318.00,
         "category": "hoteles",
-        "image": "img/FiestaResort.jpeg"
+        "image": "img/FiestaResort.jpeg",
+        "image2": "img/FiestaResort_2.jpeg",
+        "image3": "img/FiestaResort_3.jpeg",
+        "vecesComprado": 280,
+        "rating": 4.5,
+        "descripcionDetallada": "Escápate a este hotel todo incluido para grupos de 2 a 8 personas, a solo 50 minutos de San José. Relájate en su ambiente tranquilo y rodeado de naturaleza, con piscinas, restaurantes y acceso a una variedad de actividades recreativas. El paquete incluye alojamiento, comida y bebidas, acceso a las piscinas y actividades como deportes acuáticos y entretenimiento en vivo. Ideal para una escapada rápida cerca de la ciudad, sin sacrificar la calidad del descanso."
     },
     {
         "id": 9,
@@ -69,7 +109,12 @@
         "description": "Ambiente temático inspirado en Hollywood, frente a la paradisiaca costa del Pacifico.",
         "price": 416.99,
         "category": "hoteles",
-        "image": "img/PlanetH.jpg"
+        "image": "img/PlanetH.jpg",
+        "image2": "img/PlanetH_2.jpg",
+        "image3": "img/PlanetH_3.jpg",
+        "vecesComprado": 150,
+        "rating": 4.0,
+        "descripcionDetallada": "Disfruta del glamour y la relajación en este hotel temático inspirado en Hollywood, diseñado para grupos de 2 a 4 personas. Ubicado frente a la costa pacífica, el hotel ofrece una experiencia única con decoraciones y servicios inspirados en el cine. El paquete incluye alojamiento en habitaciones temáticas, servicio todo incluido, acceso a sus piscinas y restaurantes, y una variedad de actividades como cine al aire libre y deportes acuáticos. Una escapada ideal para los amantes del cine y la diversión."
     },
     {
         "id": 10,
@@ -77,7 +122,12 @@
         "description": "El complejo de 5 estrellas, Hotel Riu Guanacaste (Todo Incluido 24h), está situado en la playa de Matapalo en Guanacaste, Costa Rica.",
         "price": 259.00,
         "category": "hoteles",
-        "image": "img/RiuGuanacaste.jpg"
+        "image": "img/RiuGuanacaste.jpg",
+        "image2": "img/RiuGuanacaste_2.jpg",
+        "image3": "img/RiuGuanacaste_3.jpg",
+        "vecesComprado": 520,
+        "rating": 4.6,
+        "descripcionDetallada": "Relájate en este lujoso complejo de 5 estrellas, ideal para grupos de 2 a 6 personas. El hotel está ubicado en la playa de Matapalo, Guanacaste, y ofrece un paquete todo incluido con alojamiento, comidas y bebidas las 24 horas. Además, tendrás acceso a actividades como deportes acuáticos, entretenimiento nocturno, y excursiones. Es el destino perfecto para disfrutar del sol, la playa y unas vacaciones familiares o románticas inolvidables."
     },
     {
         "id": 11,
@@ -85,7 +135,12 @@
         "description": "Todo Incluido 24h, está situado en la playa de Matapalo en Guanacaste, Costa Rica.",
         "price": 307.50,
         "category": "hoteles",
-        "image": "img/HotelRiu.jpg"
+        "image": "img/HotelRiu.jpg",
+        "image2": "img/HotelRiu_2.jpg",
+        "image3": "img/HotelRiu_3.jpg",
+        "vecesComprado": 490,
+        "rating": 4.8,
+        "descripcionDetallada": "Disfruta de una experiencia de lujo en este hotel 5 estrellas todo incluido, para grupos de 2 a 4 personas. Ubicado en la playa de Matapalo, este resort ofrece un servicio exclusivo y habitaciones de lujo con vistas al océano. El paquete incluye alojamiento, comida, bebidas, acceso a actividades como deportes acuáticos, y entretenimiento diario. Ideal para parejas y viajeros que buscan relajación, lujo y calidad en un solo destino."
     },
     {
         "id": 12,
@@ -93,7 +148,12 @@
         "description": "Hotel The Westin Golf Resort & Spa Reserva Conchal",
         "price": 439.99,
         "category": "hoteles",
-        "image": "img/Westin.jpeg"
+        "image": "img/Westin.jpeg",
+        "image2": "img/Westin_2.jpeg",
+        "image3": "img/Westin_3.jpeg",
+        "vecesComprado": 330,
+        "rating": 4.7,
+        "descripcionDetallada": "Escapa a la tranquilidad y el lujo de The Westin Golf Resort & Spa, para grupos de 2 a 6 personas. Ubicado en la Reserva Conchal, este hotel 5 estrellas ofrece una experiencia de lujo con acceso a su exclusivo campo de golf, un relajante spa y restaurantes de primera categoría. El paquete todo incluido incluye alojamiento, acceso a sus playas privadas, actividades como snorkel y deportes acuáticos, y entretenimiento para todas las edades. Ideal para quienes buscan descanso y aventuras de lujo."
     },
     {
         "id": 13,
@@ -101,7 +161,12 @@
         "description": "Momento de disfrutar los beneficios de las aguas termales, relájese como merece.",
         "price": 119.00,
         "category": "hoteles",
-        "image": "img/Baldi2.jpg"
+        "image": "img/Baldi2.jpg",
+        "image2": "img/Baldi2_2.jpg",
+        "image3": "img/Baldi2_3.jpg",
+        "vecesComprado": 210,
+        "rating": 4.2,
+        "descripcionDetallada": "Sumérgete en el bienestar de las aguas termales en el Hotel Baldi Hot Springs, ideal para grupos de 2 a 6 personas. Ubicado cerca del Volcán Arenal, este resort ofrece diversas piscinas termales y un spa completo. El paquete incluye acceso a las aguas termales, alojamiento confortable, y acceso a actividades como senderismo y excursiones. Ideal para quienes buscan relajación en un entorno natural, este hotel es perfecto para una escapada revitalizante."
     },
     {
         "id": 14,
@@ -109,7 +174,12 @@
         "description": "Viaja con nosotros a 3 increíbles países",
         "price": 3549.99,
         "category": "Internacionales",
-        "image": "img/JaponCorea.jpg"
+        "image": "img/JaponCorea.jpg",
+        "image2": "img/JaponCorea_2.jpg",
+        "image3": "img/JaponCorea_3.jpg",
+        "vecesComprado": 120,
+        "rating": 4.9,
+        "descripcionDetallada": "Explora tres países fascinantes en un tour internacional para grupos de 2 a 12 personas. Viaja por Japón, Corea y China, donde podrás sumergirte en su rica historia, tecnología avanzada, y paisajes impresionantes. El paquete incluye vuelos, alojamiento, traslados, guías turísticos, y entradas a atracciones icónicas. Desde los templos de Kyoto hasta las ciudades futuristas de Seúl y Beijing, este tour promete ser una experiencia cultural completa. ¡Una oportunidad única para conocer Asia en profundidad!"
     },
     {
         "id": 15,
@@ -117,15 +187,25 @@
         "description": "Viajes a Argentina desde Costa Rica.",
         "price": 1789.00,
         "category": "Internacionales",
-        "image": "img/Bariloche.jpg"
-    },
+        "image": "img/Bariloche.jpg",
+        "image2": "img/Bariloche_2.jpg",
+        "image3": "img/Bariloche_3.jpg",
+        "vecesComprado": 80,
+        "rating": 4.4,
+        "descripcionDetallada": "Viaja a dos de los destinos más destacados de Argentina en un tour internacional para grupos de 2 a 8 personas. Descubre la belleza natural de Bariloche, con sus montañas y lagos, y disfruta del ritmo vibrante de Buenos Aires, la capital cultural de Argentina. El paquete incluye vuelos internacionales, alojamiento, traslados, y visitas a los lugares más emblemáticos como el Cerro Catedral y el Obelisco. Un itinerario completo que combina naturaleza, cultura y diversión."
+    }, 
     {
         "id": 16,
         "name": "Bocas del Toro",
         "description": "Salidas desde Costa Rica a Bocas del Toro, Panamá.",
         "price": 659.60,
         "category": "Internacionales",
-        "image": "img/BocasDelToro.jpg"
+        "image": "img/BocasDelToro.jpg",
+        "image2": "img/BocasDelToro_2.jpg",
+        "image3": "img/BocasDelToro_3.jpg",
+        "vecesComprado": 95,
+        "rating": 4.5,
+        "descripcionDetallada": "Explora el paraíso de Bocas del Toro, un destino lleno de belleza natural y actividades acuáticas con nuestro paquete de 1 persona. El tour incluye transporte cómodo, alojamiento, y visitas guiadas a las playas más hermosas y los famosos cayos. Es perfecto para quienes buscan relajación, pero también aventura. Disfruta de la gastronomía local y el ambiente tropical único de este destino panameño."
     },
     {
         "id": 17,
@@ -133,7 +213,12 @@
         "description": "Bellas playas de arena blanca y sus aguas claras. Garantizando diversión y relajación. Personalice su viaje a Cancún con nosotros.",
         "price": 1425.00,
         "category": "Internacionales",
-        "image": "img/cancun2.jpeg"
+        "image": "img/cancun2.jpeg",
+        "image2": "img/cancun2_2.jpeg",
+        "image3": "img/cancun2_3.jpeg",
+        "vecesComprado": 230,
+        "rating": 4.8,
+        "descripcionDetallada": "Cancún es el destino ideal para quienes buscan un equilibrio entre descanso y aventura. Disfruta de sus impresionantes playas de arena blanca, las actividades acuáticas como el snorkeling y las visitas a las ruinas mayas cercanas. Este paquete incluye transporte, alojamiento en resorts de lujo, y excursiones exclusivas para conocer la región. Para familias de 6 a 8 personas"
     },
     {
         "id": 18,
@@ -141,7 +226,12 @@
         "description": "Viajes a Cartagena de Indias, Colombia desde Costa Rica.",
         "price": 799.99,
         "category": "Internacionales",
-        "image": "img/Cartagena.jpg"
+        "image": "img/Cartagena.jpg",
+        "image2": "img/Cartagena_2.jpg",
+        "image3": "img/Cartagena_3.jpg",
+        "vecesComprado": 150,
+        "rating": 4.7,
+        "descripcionDetallada": "Descubre la histórica ciudad de Cartagena de Indias en Colombia. Con su arquitectura colonial, hermosos castillos y vibrante vida nocturna, es un destino fascinante para los viajeros. El tour incluye transporte, alojamiento en el centro histórico, y visitas guiadas a los principales atractivos turísticos de la ciudad. Para 6 personas."
     },
     {
         "id": 19,
@@ -149,7 +239,12 @@
         "description": "4 días / 3 noches. Ciudad con un legado y una magia propia.",
         "price": 999.99,
         "category": "Internacionales",
-        "image": "img/Guatemala.jpg"
+        "image": "img/Guatemala.jpg",
+        "image2": "img/Guatemala_2.jpg",
+        "image3": "img/Guatemala_3.jpg",
+        "vecesComprado": 60,
+        "rating": 4.3,
+        "descripcionDetallada": "Vive la experiencia de explorar la ciudad de Antigua, los volcanes y los mercados de Guatemala. Este tour de 4 días es ideal para los viajeros que buscan cultura, historia y naturaleza en un solo paquete. Incluye transporte, alojamiento, y visitas a los principales atractivos del país, como las ruinas mayas y los volcanes activos. Para 8 personas."
     },
     {
         "id": 20,
@@ -157,7 +252,12 @@
         "description": "Viajes a Brasil desde Costa Rica. Rio Janeiro / Foz do Iguazu / Manaus / Selva  / Salvador Bahía",
         "price": 3039.00,
         "category": "Internacionales",
-        "image": "img/Brasil.jpg"
+        "image": "img/Brasil.jpg",
+        "image2": "img/Brasil_2.jpg",
+        "image3": "img/Brasil_3.jpg",
+        "vecesComprado": 40,
+        "rating": 4.6,
+        "descripcionDetallada": "Brasil es un destino impresionante que combina la naturaleza exuberante con la cultura vibrante. Este tour incluye las Cataratas de Iguazú, el Cristo Redentor en Río, la selva amazónica, y mucho más. Un viaje ideal para 2 personas que ofrece una experiencia única a través de sus principales atractivos turísticos, con alojamiento y transporte incluidos."
     },
     {
         "id": 21,
@@ -165,7 +265,12 @@
         "description": "Aguas claras de tono turquesa que se pierde al horizonte con el cielo. Arena blanca y cálida.",
         "price": 839.99,
         "category": "Internacionales",
-        "image": "img/playas-cabo-san-lucas.jpeg"
+        "image": "img/playas-cabo-san-lucas.jpeg",
+        "image2": "img/playas-cabo-san-lucas_2.jpeg",
+        "image3": "img/playas-cabo-san-lucas_3.jpeg",
+        "vecesComprado": 85,
+        "rating": 4.2,
+        "descripcionDetallada": "Disfruta de las aguas turquesas y la arena blanca de Los Cabos en este exclusivo paquete turístico para 3 personas. El tour incluye transporte, alojamiento en hoteles de lujo, y actividades acuáticas como snorkel y paseos en barco. Un destino ideal para los amantes de las playas y la tranquilidad."
     },
     {
         "id": 22,
@@ -173,7 +278,12 @@
         "description": "Viajes a la ciudad de Medellín, Colombia desde Costa Rica.",
         "price": 765.00,
         "category": "Internacionales",
-        "image": "img/Medellin.png"
+        "image": "img/Medellin.png",
+        "image2": "img/Medellin_2.png",
+        "image3": "img/Medellin_3.png",
+        "vecesComprado": 95,
+        "rating": 4.4,
+        "descripcionDetallada": "Medellín, conocida como la ciudad de la eterna primavera, te ofrece un clima perfecto y un ambiente amigable, perfecto para familias de 4-6 personas. Descubre su transformación y cultura a través de un recorrido por sus barrios, museos y parques. Este tour incluye transporte, alojamiento, y un recorrido guiado por los puntos más emblemáticos de la ciudad."
     },
     {
         "id": 23,
@@ -181,7 +291,12 @@
         "description": "Perú cuenta con diversos atractivos que lo convierten en un destino turístico muy completo.",
         "price": 1159.99,
         "category": "Internacionales",
-        "image": "img/machupicchu-llamas-home.jpg"
+        "image": "img/machupicchu-llamas-home.jpg",
+        "image2": "img/machupicchu-llamas-home_2.jpg",
+        "image3": "img/machupicchu-llamas-home_3.jpg",
+        "vecesComprado": 150,
+        "rating": 4.9,
+        "descripcionDetallada": "Perú es un destino lleno de historia, naturaleza y cultura. Visita Machu Picchu, las líneas de Nazca, y los mercados locales, mientras exploras una rica herencia cultural con este paquete de 1 persona. Este tour incluye transporte, alojamiento en hoteles de 3 y 4 estrellas, y un guía experto que te llevará por los sitios más emblemáticos."
     },
     {
         "id": 24,
@@ -189,31 +304,52 @@
         "description": "Viajes a Río de Janeiro desde Costa Rica.",
         "price": 1389.00,
         "category": "Internacionales",
-        "image": "img/RioJaneiro.jpeg"
+        "image": "img/RioJaneiro.jpeg",
+        "image2": "img/PuntaCana_2.jpg",
+        "image3": "img/PuntaCana_3.jpg",
+        "vecesComprado": 120,
+        "rating": 4.6,
+       "descripcionDetallada": "Río de Janeiro es conocido por su vibrante cultura, playas icónicas como Copacabana e Ipanema, y su impresionante paisaje que combina montañas y mar. Disfruta de actividades como tours al Cristo Redentor, paseos en el teleférico del Pan de Azúcar y recorridos por el histórico barrio de Santa Teresa. Este paquete está diseñado para 4 personas e incluye alojamiento en hoteles de categoría superior, transporte privado, y una agenda de actividades culturales y recreativas ideales para grupos o familias."
     },
     {
-        "id": 25,
+         "id": 25,
         "name": "Joyas Del Sudeste Asiático",
         "description": "Tailandia, Vietnam y Singapur.",
         "price": 2649.00,
         "category": "Internacionales",
-        "image": "img/Singapur.jpg"
+        "image": "img/Singapur.jpg",
+        "image2": "img/SanAndres_2.jpg",
+        "image3": "img/SanAndres_3.jpg",
+        "vecesComprado": 145,
+        "rating": 4.7,
+        "descripcionDetallada": "Explora la magia del Sudeste Asiático con este exclusivo paquete para 2 personas que incluye Tailandia, Vietnam y Singapur. Descubre la majestuosidad de los templos de Bangkok, relájate en las paradisíacas playas de Phuket, navega por la bahía de Ha Long en Vietnam y sumérgete en la vibrante mezcla de culturas de Singapur. El paquete incluye alojamiento en hoteles de lujo, transporte interno entre destinos y una variedad de actividades culturales, gastronómicas y de aventura para crear recuerdos inolvidables."
     },
     {
         "id": 26,
         "name": "Crucero Serenade Of The Seas 2025-2026",
-        "description": "Las mejores vacaciones en Latinoamérica a bordo del crucero Serenade of the Seas. Saliendo desde Panamá. *Crucero sin visa*",
+        "description": "Las mejores vacaciones en Latinoamérica a bordo del crucero Serenade of the Seas. Saliendo                   desde Panamá. *Crucero sin visa*",
         "price": 1212.00,
         "category": "Cruceros",
-        "image": "img/ROYALCARIBBEAN.jpg"
+        "image": "img/ROYALCARIBBEAN.jpg",
+        "image2": "img/SantiagoChile_2.jpg",
+        "image3": "img/SantiagoChile_3.jpg",
+        "vecesComprado": 110,
+        "rating": 4.3,
+        "descripcionDetallada": "Embárcate en una aventura inolvidable a bordo del Crucero Serenade of the Seas 2025-2026, diseñado para 2 personas. Explora destinos exóticos mientras disfrutas de instalaciones de primer nivel como piscinas, restaurantes gourmet, spa de lujo y entretenimiento para todas las edades. Este itinerario incluye escalas en espectaculares puertos internacionales, excursiones guiadas y la comodidad de camarotes elegantes con vistas al océano. Perfecto para parejas, amigos o quienes buscan una experiencia de viaje única, combinando relajación y descubrimiento."
+
     },
     {
-        "id": 27,
+         "id": 27,
         "name": "Crucero Caribe Sur Enero 2026",
-        "description": "Salida Grupal desde Costa Rica a Panamá para abordar el Crucero. Reserve su espacio con $250",
+        "description": "Salida Grupal desde Costa Rica a Panamá para abordar el Crucero. Reserve su espacio con   $250",
         "price": 1299.99,
         "category": "Cruceros",
-        "image": "img/Crucero.jfif"
+        "image": "img/Crucero.jfif",
+        "image2": "img/Tulum_2.jpg",
+        "image3": "img/Tulum_3.jpg",
+        "vecesComprado": 75,
+        "rating": 4.8,
+        "descripcionDetallada": "Descubre las maravillas tropicales a bordo del Crucero Caribe Sur Enero 2026, diseñado para 4 personas. Este viaje de ensueño incluye paradas en destinos paradisíacos como Aruba, Curazao y Bonaire, donde podrás disfrutar de playas de arena blanca, aguas cristalinas y una rica cultura caribeña. A bordo, disfruta de comodidades de lujo como piscinas, restaurantes internacionales, espectáculos en vivo y actividades para toda la familia. El paquete incluye alojamiento en camarotes con vista al mar, comidas gourmet y excursiones guiadas en cada puerto para una experiencia completa e inolvidable."
     },
     {
         "id": 28,
@@ -221,7 +357,12 @@
         "description": "Estados Unidos,Bahamas,México,Honduras saliendo de Puerto Canaveral",
         "price": 1441.99,
         "category": "Cruceros",
-        "image": "img/wonder-of-the-seas.jpg"
+        "image": "img/wonder-of-the-seas.jpg",
+        "image2": "img/Venecia_2.jpg",
+        "image3": "img/Venecia_3.jpg",
+        "vecesComprado": 55,
+        "rating": 4.9,
+        "descripcionDetallada": "Embárcate en una experiencia inolvidable a bordo del Crucero Wonder of the Seas 2025, ideal para 3 personas. Este imponente barco, el más grande y espectacular del mundo, te llevará a destinos paradisíacos mientras disfrutas de una oferta sin igual de entretenimiento, gastronomía y actividades. Explora el Caribe en paradas que incluyen playas de ensueño y ciudades vibrantes. A bordo, deléitate con restaurantes temáticos, shows de clase mundial, parques acuáticos y áreas exclusivas para relajación. El paquete incluye camarotes cómodos y modernos, todas las comidas, y experiencias diseñadas para garantizar una aventura inolvidable."
     },
     {
         "id": 29,
@@ -229,14 +370,24 @@
         "description": "Planifica un viaje soñado a Disneyland",
         "price": 1839.00,
         "category": "Especiales",
-        "image": "img/DisneyOrlando.jpg"
-    },
+        "image": "img/DisneyOrlando.jpg",
+        "image2": "img/DisneyOrlando_2.jpg",
+        "image3": "img/DisneyOrlando_3.jpg",
+        "vecesComprado": 250,
+        "rating": 4.1,
+        "descripcionDetallada": "Vive la magia de Disney en Orlando en un tour para grupos familiares de 4 a 12 personas. Disfruta de los parques más famosos del mundo como Magic Kingdom, Epcot, y Animal Kingdom. El paquete incluye entradas a los parques, transporte, alojamiento en hoteles cerca de Disney, y guía especializada para aprovechar al máximo cada día en los parques temáticos más mágicos del planeta."
+    }, 
     {
-        "id": 30,
+       "id": 30,
         "name": "Disney California Adventure Park, CA, Estados Unidos",
         "description": "Comienza tu sueño de viajar a Disney",
         "price": 1900.00,
         "category": "Especiales",
-        "image": "img/DisneyCalifornia.jpg"
+        "image": "img/DisneyCalifornia.jpg",
+        "image2": "img/DisneyCalifornia_2.jpg",
+        "image3": "img/DisneyCalifornia_3.jpg",
+        "vecesComprado": 230, 
+        "rating": 4.3,
+        "descripcionDetallada": "Sumérgete en la magia de Disney en California Adventure Park en un viaje único para familias y grupos de hasta 12 personas. Vive las aventuras de Pixar Pier, disfruta de la emoción de las montañas rusas y la magia de los espectáculos nocturnos. Este paquete incluye entradas a los parques, transporte, alojamiento cercano y un itinerario guiado para aprovechar al máximo tu visita. Ideal para quienes buscan una experiencia completa en uno de los parques más innovadores de Disney."
     }
 ]
