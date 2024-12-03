@@ -84,15 +84,41 @@ function showProductDetails(productId) {
       const product = products.find(p => p.id === productId);
       if (product) {
         // Actualizar los elementos del modal
-        document.getElementById('productImage').src = product.image || 'img/default.jpg';
         document.getElementById('productName').textContent = product.name;
-        document.getElementById('productDescription').textContent = product.description || 'No disponible';
         document.getElementById('productPrice').textContent = `$${product.price.toFixed(2)}`;
         document.getElementById('productCategory').textContent = product.category || 'General';
+        document.getElementById('productDescription').textContent = product.descripcionDetallada || 'No disponible';
 
-        // Configurar el ID del producto en el botón del modal
-        const addToCartBtn = document.getElementById('add-to-cart-modal-btn');
-        addToCartBtn.setAttribute('data-product-id', productId);
+        // Configurar el carousel
+        const carouselInner = document.getElementById('carouselInner');
+        carouselInner.innerHTML = ''; // Limpiar las imágenes previas del carousel
+
+        const images = [product.image, product.image2, product.image3].filter(img => img); // Filtrar imágenes no vacías
+        if (images.length === 0) {
+          images.push('img/default.jpg'); // Agregar una imagen por defecto si no hay imágenes disponibles
+        }
+
+        images.forEach((imgSrc, index) => {
+          const slide = document.createElement('div');
+          slide.classList.add('carousel-item');
+          
+          // La primera imagen debe tener la clase "active"
+          if (index === 0) {
+            slide.classList.add('active');
+          }
+
+          const imgElement = document.createElement('img');
+          imgElement.classList.add('d-block', 'w-100');
+          imgElement.src = imgSrc;
+          imgElement.alt = product.name;
+
+          slide.appendChild(imgElement);
+          carouselInner.appendChild(slide);
+        });
+
+        // Mostrar el botón "Contáctanos"
+        const contactBtn = document.getElementById('contactUsBtn');
+        contactBtn.style.display = 'block'; // Asegúrate de que el botón esté visible
 
         // Mostrar el modal
         const productModal = new bootstrap.Modal(document.getElementById('productModal'));
@@ -101,6 +127,7 @@ function showProductDetails(productId) {
     })
     .catch(error => console.error('Error al cargar detalles del producto:', error));
 }
+
 
 // Función para agregar productos al carrito
 function addToCart(productId) {
