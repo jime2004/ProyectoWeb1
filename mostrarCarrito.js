@@ -34,7 +34,7 @@ function displayCart() {
     content.append(`
             <div class="form-group">
                 <label for="customer-name">Nombre del Cliente:</label>
-                <input type="text" id="customer-name" class="form-control" placeholder="Ingresa tu nombre" value="*Sin Nombre*" oninput="customerName = this.value">
+                <input type="text" id="customer-name" class="form-control" placeholder="Ingresa tu nombre" oninput="customerName = this.value">
                 
             <br>
             </div>
@@ -276,6 +276,7 @@ function generatePDF() {
     y += rowHeight;
     const maxWidth = 180;
 
+    const totalFromDOM = parseFloat($("#total-price").text());
     // Detalles de los productos
     cart.forEach(item => {
         const subtotal = item.price * item.quantity;
@@ -285,7 +286,7 @@ function generatePDF() {
         doc.text(item.quantity.toString(), 120, y + 7);
         doc.text(`$${subtotal.toFixed(2)}`, 150, y + 7);
         y += rowHeight; // Incremento para la siguiente línea
-        total += subtotal;
+        total= totalFromDOM;
     });
 
     // Total
