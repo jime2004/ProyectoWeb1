@@ -1,104 +1,111 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acerca De</title>
-    <link rel="stylesheet" href="./css/style-acercaDe.css">
-        <!-- Cargar SweetAlert -->
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <!-- archivo JS personalizado -->
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <script src="indicadorCarrito.js"></script>
-      <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acerca De</title>
+  <link rel="stylesheet" href="./css/style-acercaDe.css">
+  <!-- Cargar SweetAlert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- archivo JS personalizado -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="indicadorCarrito.js"></script>
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="img/logonav.png" alt="Logo" width="200" height="60" class="d-inline-block align-text-top">
-              </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="nosotros.html">Nosotros</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="servicios.html">Servicios</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="blog.html">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contacto.html">Contacto</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="preguntas.html">Preguntas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="acercaDe.html">Acerca de</a>
-              </li>
-            </ul>  
-          </div>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="img/logonav.png" alt="Logo" width="200" height="60" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="servicios.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="preguntas.html">Preguntas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="acercaDe.html">Acerca de</a>
+            </li>
+          </ul>
         </div>
-        <div class="cart-icon">
-          <a href="carrito.html" id="view-cart" class="position-relative">
-              <!-- Icono del carrito -->
-              <img src="img/carrito-de-compras.png" alt="Carrito" width="30" height="30">
-              
-              <!-- Badge de la cantidad de productos en el carrito -->
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-indicator" style="display: none;">
-                  0
-              </span>
-          </a>
       </div>
-      </nav>
-</header>
-    <main>
-        <section class="banner d-block w-100">
-            <div class="banner-content">
-                <h1>Acerca De</h1>
-            </div>
-        </section>
-        <section class="text-section">
-            <h2 class="subtitulo">Autores</h2>
-        </section>
-        <section class="about">
-            <div class="about-section">
-                <img src="./img/LeoImagenFormal.jpeg" alt="Foto de Leonardo" class="about-image">
-                <h2>Leonardo Oconitrillo Rojas</h2>
-                <ul class="user-info">
-                    <li><strong>Cedula:</strong> 2 0864 0317</li>
-                    <li><strong>Correo:</strong> leoconitrillo07@gmail.com</li>
-                    <li><strong>Teléfono:</strong> +506 8866 3385</li>
-                </ul>
-            </div>
-    
-            <div class="about-section">
-                <img src="./img/FotoJimena1.jpeg" alt="Foto de Jimena" class="about-image">
-                <h2>Jimena Cordoba Alvarado</h2>
-                <ul class="user-info">
-                    <li><strong>Cedula:</strong> 2 0850 0464</li>
-                    <li><strong>Correo:</strong> jime.cordoba03@gmail.com</li>
-                    <li><strong>Teléfono:</strong> +506 8528 2137</li>
-                </ul>
-            </div>
-        </section>
-    </main>
+      <div class="cart-icon">
+        <a href="carrito.html" id="view-cart" class="position-relative">
+          <!-- Icono del carrito -->
+          <img src="img/carrito-de-compras.png" alt="Carrito" width="30" height="30">
+
+          <!-- Badge de la cantidad de productos en el carrito -->
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+            id="cart-indicator" style="display: none;">
+            0
+          </span>
+        </a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="banner d-block w-100">
+      <div class="banner-content">
+        <h1>Acerca De</h1>
+      </div>
+    </section>
+    <section class="text-section">
+      <h2 class="subtitulo">Autores</h2>
+    </section>
+    <section class="about">
+      <div class="about-section">
+        <img src="./img/LeoImagenFormal.jpeg" alt="Foto de Leonardo" class="about-image">
+        <h2>Leonardo Oconitrillo Rojas</h2>
+        <ul class="user-info">
+          <li><strong>Cedula:</strong> 2 0864 0317</li>
+          <li><strong>Correo:</strong> leoconitrillo07@gmail.com</li>
+          <li><strong>Teléfono:</strong> +506 8866 3385</li>
+        </ul>
+      </div>
+      <div class="about-section">
+        <img src="./img/FotoJimena1.jpeg" alt="Foto de Jimena" class="about-image">
+        <h2>Jimena Cordoba Alvarado</h2>
+        <ul class="user-info">
+          <li><strong>Cedula:</strong> 2 0850 0464</li>
+          <li><strong>Correo:</strong> jime.cordoba03@gmail.com</li>
+          <li><strong>Teléfono:</strong> +506 8528 2137</li>
+        </ul>
+      </div>
+    </section>
+  </main>
 </body>
+
 </html>

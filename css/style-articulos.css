@@ -1,6 +1,7 @@
 * {
   font-family: "Poppins";
 }
+
 :root {
   --blanco: #ffffff;
   --verdeOscuro: #8fa96d;
@@ -19,8 +20,8 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 5px 0;
   height: auto;
 }
@@ -45,12 +46,12 @@ nav ul {
 }
 
 nav ul li {
-  position: relative; 
+  position: relative;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #333 ;
+  color: #333;
   font-size: 18px !important;
   padding: 5px 5px !important;
 }
@@ -63,16 +64,16 @@ nav ul li a::after {
   content: '';
   position: absolute;
   width: 100%;
-  height: 2px; 
-  background-color: var(--cafeClaro); 
+  height: 2px;
+  background-color: var(--cafeClaro);
   left: 0;
-  bottom: -7px; 
+  bottom: -7px;
   transform: scaleX(0);
-  transition: transform 0.5s ease; 
+  transition: transform 0.5s ease;
 }
 
 nav ul li a:hover::after {
-  transform: scaleX(1); 
+  transform: scaleX(1);
 }
 
 nav {
@@ -83,24 +84,32 @@ nav {
   .container {
     flex-direction: column;
   }
+
   nav ul {
-    flex-direction: column; 
-    align-items: center; 
-    gap: 15px; 
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
+
   .cart-icon {
-    position: absolute; /* Posición absoluta para mover el carrito */ 
-    top: 27px; /* Alineado con la parte superior del navbar */
-    right: 11px; /* Ajusta la distancia a la izquierda del botón de menú */
+    position: absolute;
+    /* Posición absoluta para mover el carrito */
+    top: 27px;
+    /* Alineado con la parte superior del navbar */
+    right: 11px;
+    /* Ajusta la distancia a la izquierda del botón de menú */
   }
 
   .navbar-toggler {
-    position: relative; /* Mantén el botón de menú en su lugar */
-    z-index: 1; /* Asegura que el botón esté encima del carrito */
+    position: relative;
+    /* Mantén el botón de menú en su lugar */
+    z-index: 1;
+    /* Asegura que el botón esté encima del carrito */
   }
 
   .container-fluid {
-    position: relative; /* Asegura que el carrito se posicione correctamente dentro del contenedor */
+    position: relative;
+    /* Asegura que el carrito se posicione correctamente dentro del contenedor */
   }
 }
 
@@ -111,10 +120,10 @@ nav {
 }
 
 .cart-icon {
-  margin-left: auto; 
-  margin-right: 90px; 
+  margin-left: auto;
+  margin-right: 90px;
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
 
 .cart-icon img {
@@ -264,13 +273,17 @@ article h2 {
 
 /* Estilos de la sección de imágenes */
 .image-row {
-  display:grid;
-  gap: 1rem; /* Espaciado entre imágenes */
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajuste automático */
-  justify-items: center; /* Centra las imágenes en sus celdas */
+  display: grid;
+  gap: 1rem;
+  /* Espaciado entre imágenes */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  /* Ajuste automático */
+  justify-items: center;
+  /* Centra las imágenes en sus celdas */
   align-items: center;
   margin: 90px auto;
-  padding: 0 1rem; /* Añade margen interno para evitar que las imágenes queden pegadas al borde */
+  padding: 0 1rem;
+  /* Añade margen interno para evitar que las imágenes queden pegadas al borde */
 }
 
 .image-row img {
@@ -282,7 +295,8 @@ article h2 {
 
 .image-row img:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el mouse */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  /* Sombra más pronunciada al pasar el mouse */
 }
 
 
@@ -433,4 +447,3 @@ footer {
     margin-top: 20px;
   }
 }
-

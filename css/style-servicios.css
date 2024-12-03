@@ -1,18 +1,20 @@
 * {
   font-family: "Poppins";
 }
+
 :root {
-    --blanco: #ffffff;
-    --verdeOscuro: #8fa96d; 
-    --verdeClaro: #D4DDB1;
-    --cafe: #7A6448; 
-    --beige: #F9F4E3;
-    --cafeClaro: #CDB28A;
-    --negro: #000000;
-    --gris:#333;
+  --blanco: #ffffff;
+  --verdeOscuro: #8fa96d;
+  --verdeClaro: #D4DDB1;
+  --cafe: #7A6448;
+  --beige: #F9F4E3;
+  --cafeClaro: #CDB28A;
+  --negro: #000000;
+  --gris: #333;
 }
 
-body, html {
+body,
+html {
   margin-top: 90px;
   padding: 0;
   font-family: "Poppins";
@@ -91,8 +93,8 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 5px 0;
   height: auto;
 }
@@ -117,12 +119,12 @@ nav ul {
 }
 
 nav ul li {
-  position: relative; 
+  position: relative;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #333 ;
+  color: #333;
   font-size: 18px !important;
   padding: 5px 5px !important;
 }
@@ -135,16 +137,16 @@ nav ul li a::after {
   content: '';
   position: absolute;
   width: 100%;
-  height: 2px; 
-  background-color: var(--cafeClaro); 
+  height: 2px;
+  background-color: var(--cafeClaro);
   left: 0;
-  bottom: -7px; 
+  bottom: -7px;
   transform: scaleX(0);
-  transition: transform 0.5s ease; 
+  transition: transform 0.5s ease;
 }
 
 nav ul li a:hover::after {
-  transform: scaleX(1); 
+  transform: scaleX(1);
 }
 
 nav {
@@ -155,24 +157,26 @@ nav {
   .container {
     flex-direction: column;
   }
+
   nav ul {
-    flex-direction: column; 
-    align-items: center; 
-    gap: 15px; 
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
+
   .cart-icon {
-    position: absolute; 
-    top: 27px; 
+    position: absolute;
+    top: 27px;
     right: 11px;
   }
 
   .navbar-toggler {
-    position: relative; 
+    position: relative;
     z-index: 1;
   }
 
   .container-fluid {
-    position: relative; 
+    position: relative;
   }
 
 }
@@ -184,10 +188,10 @@ nav {
 }
 
 .cart-icon {
-  margin-left: auto; 
-  margin-right: 90px; 
+  margin-left: auto;
+  margin-right: 90px;
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
 
 .cart-icon img {
@@ -196,7 +200,7 @@ nav {
 }
 
 
-main{
+main {
   padding-top: 20px !important;
 }
 
@@ -232,16 +236,16 @@ main{
 
 .card:hover .card-body {
   transform: translateY(-20px);
-  opacity: 1; 
+  opacity: 1;
 }
 
-.btn-primary{
+.btn-primary {
   background-color: #768f55 !important;
   border-color: #718d4c !important;
   font-size: 0.91rem !important;
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
   background-color: #8fa96d !important;
 }
 
@@ -250,20 +254,21 @@ main{
   transition: opacity 0.3s ease;
 }
 
-.btn-secondary{
+.btn-secondary {
   background-color: var(--cafe) !important;
   border-color: var(--cafe) !important;
   font-size: 0.91rem !important;
 }
-.btn-secondary:hover{
-  background-color: #8b785e  !important;
+
+.btn-secondary:hover {
+  background-color: #8b785e !important;
 }
 
 .card:hover .btn {
   opacity: 1;
 }
 
-.card-title{
+.card-title {
   font-weight: 600;
 }
 
@@ -281,12 +286,12 @@ main{
 }
 
 .custom-modal-header {
-  background-color: var(--verdeOscuro); 
-  color: #ffffff; 
+  background-color: var(--verdeOscuro);
+  color: #ffffff;
 }
 
 .custom-modal-header .modal-title {
-  color: #ffffff; 
+  color: #ffffff;
   font-weight: 600;
   font-size: 1.5rem;
 }
