@@ -116,6 +116,16 @@ function showProductDetails(productId) {
           carouselInner.appendChild(slide);
         });
 
+        // Mostrar las estrellas de calificación (de 1 a 5 estrellas)
+        const ratingContainer = document.getElementById('productRating');
+        ratingContainer.innerHTML = ''; // Limpiar las estrellas actuales
+
+        for (let i = 0; i < 5; i++) {
+          const star = document.createElement('span');
+          star.classList.add('fa', i < product.rating ? 'fa-star' : 'fa-star-o'); // Llenar o vaciar estrellas
+          ratingContainer.appendChild(star);
+        }
+
         // Mostrar el botón "Contáctanos"
         const contactBtn = document.getElementById('contactUsBtn');
         contactBtn.style.display = 'block'; // Asegúrate de que el botón esté visible
@@ -127,6 +137,8 @@ function showProductDetails(productId) {
     })
     .catch(error => console.error('Error al cargar detalles del producto:', error));
 }
+
+
 
 
 // Función para agregar productos al carrito
