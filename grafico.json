@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "name": "Tour Río Celeste",
+        "numeroDeVecesVendido": 234
+    },
+    {
+        "id": 2,
+        "name": "Tour Safari",
+        "numeroDeVecesVendido": 145
+    },
+    {
+        "id": 3,
+        "name": "Tour Cataratas La Paz",
+        "numeroDeVecesVendido": 187
+    },
+    {
+        "id": 4,
+        "name": "Tour Isla Tortuga",
+        "numeroDeVecesVendido": 321
+    },
+    {
+        "id": 5,
+        "name": "Tour Monteverde",
+        "numeroDeVecesVendido": 212
+    },
+    {
+        "id": 6,
+        "name": "Tour Baldi Hot Springs 1 Noche",
+        "numeroDeVecesVendido": 98
+    },
+    {
+        "id": 7,
+        "name": "Hotel Dreams Las Mareas",
+        "numeroDeVecesVendido": 232
+    },
+    {
+        "id": 8,
+        "name": "Hotel Fiesta Puntarenas",
+        "numeroDeVecesVendido": 254
+    },
+    {
+        "id": 9,
+        "name": "Hotel Planet Hollywood",
+        "numeroDeVecesVendido": 167
+    },
+    {
+        "id": 10,
+        "name": "Hotel Riu Guanacaste",
+        "numeroDeVecesVendido": 289
+    },
+    {
+        "id": 11,
+        "name": "Hotel Riu Palace",
+        "numeroDeVecesVendido": 312
+    },
+    {
+        "id": 12,
+        "name": "Hotel The Westin Conchal",
+        "numeroDeVecesVendido": 198
+    },
+    {
+        "id": 13,
+        "name": "Hotel Baldi Hot Springs",
+        "numeroDeVecesVendido": 124
+    },
+    {
+        "id": 14,
+        "name": "3 Gigantes (JAPÓN, COREA Y CHINA)",
+        "numeroDeVecesVendido": 56
+    },
+    {
+        "id": 15,
+        "name": "Bariloche & Buenos Aires",
+        "numeroDeVecesVendido": 73
+    },
+    {
+        "id": 16,
+        "name": "Bocas del Toro",
+        "numeroDeVecesVendido": 255
+    },
+    {
+        "id": 17,
+        "name": "Cancún",
+        "numeroDeVecesVendido": 401
+    },
+    {
+        "id": 18,
+        "name": "Cartagena de Indias",
+        "numeroDeVecesVendido": 98
+    },
+    {
+        "id": 19,
+        "name": "Guatemala Básico",
+        "numeroDeVecesVendido": 67
+    },
+    {
+        "id": 20,
+        "name": "Lo Mejor de Brasil",
+        "numeroDeVecesVendido": 42
+    },
+    {
+        "id": 21,
+        "name": "Los Cabos",
+        "numeroDeVecesVendido": 89
+    },
+    {
+        "id": 22,
+        "name": "Medellín",
+        "numeroDeVecesVendido": 123
+    },
+    {
+        "id": 23,
+        "name": "Perú Clásico",
+        "numeroDeVecesVendido": 77
+    },
+    {
+        "id": 24,
+        "name": "Río de Janeiro",
+        "numeroDeVecesVendido": 135
+    },
+    {
+        "id": 25,
+        "name": "Joyas Del Sudeste Asiático",
+        "numeroDeVecesVendido": 48
+    },
+    {
+        "id": 26,
+        "name": "Crucero Serenade Of The Seas 2025-2026",
+        "numeroDeVecesVendido": 212
+    },
+    {
+        "id": 27,
+        "name": "Crucero Caribe Sur Enero 2026",
+        "numeroDeVecesVendido": 145
+    },
+    {
+        "id": 28,
+        "name": "Crucero Wonder of the seas 2025",
+        "numeroDeVecesVendido": 178
+    },
+    {
+        "id": 29,
+        "name": "Orlando Magia y Diversión",
+        "numeroDeVecesVendido": 192
+    },
+    {
+        "id": 30,
+        "name": "Disney California Adventure Park, CA, Estados Unidos",
+        "numeroDeVecesVendido": 86
+    }
+]

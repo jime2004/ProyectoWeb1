@@ -107,6 +107,10 @@ function showProductDetails(productId) {
             slide.classList.add('active');
           }
 
+           // Configurar el ID del producto en el botón del modal
+        const addToCartBtn = document.getElementById('add-to-cart-modal-btn');
+        addToCartBtn.setAttribute('data-product-id', productId);
+        
           const imgElement = document.createElement('img');
           imgElement.classList.add('d-block', 'w-100');
           imgElement.src = imgSrc;
