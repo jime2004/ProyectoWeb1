@@ -168,7 +168,7 @@ function addToCartFromModal() {
 
   if (!isNaN(productId)) {
     addToCart(productId);
-  } else {
+  } else { 
     console.error('No se pudo obtener el ID del producto para añadir al carrito');
   }
 }
