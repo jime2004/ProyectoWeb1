@@ -192,24 +192,39 @@ function updateQuantity(productId, quantity) {
 let discountApplied = false;
 
 // Función para aplicar el código promocional
+let originalTotal = 0; // Variable global para almacenar el total original
+let discountedTotal = 0; // Variable global para almacenar el total con descuento
+
 function applyPromoCode() {
     const promoInput = $("#promo-code").val().trim(); 
     const discountCode = "BFRIDAY"; // Código válido
     const totalPriceElement = $("#total-price");
     let total = parseFloat(totalPriceElement.text());
-
+    
     // Verificar si el descuento ya fue aplicado
     if (discountApplied) {
-        Swal.fire('Descuento ya aplicado.', 'Ya un codigo fue ingresado anteriormente', 'info');
+        Swal.fire('Descuento ya aplicado.', 'Ya un código fue ingresado anteriormente', 'info');
         $("#promo-code").val("");
         return;
     }
-
+    
     // Verificar si el código ingresado es correcto
     if (promoInput === discountCode) {
         const discount = total * 0.1; // Calcular el 10% de descuento
-        total -= discount; // Restar el descuento del total
-        totalPriceElement.text(total.toFixed(2)); // Actualizar el total en el carrito
+        discountedTotal = total - discount; // Calcular el total con descuento
+        originalTotal = total; // Guardar el total original
+
+        // Actualizar la visualización del precio
+        totalPriceElement.html(`
+            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 5px;">
+                <span style="font-size: 1em; color: #a0a0a0; text-decoration: line-through;">
+                    Precio original: $${originalTotal.toFixed(2)} 
+                </span>
+                <span style="font-size: 1em; font-weight: bold; color: #6BAE6C;">
+                    Precio con descuento: $${discountedTotal.toFixed(2)} 
+                </span>
+            </div>
+        `);
 
         // Actualizar para evitar múltiples aplicaciones
         discountApplied = true;
@@ -221,95 +236,114 @@ function applyPromoCode() {
         Swal.fire('¡Código promocional aplicado!', `Se ha descontado un 10% del total.`, 'success');
     } else {
         // Si el código no es válido
-        Swal.fire('Código promocional inválido', ` Por favor, inténtalo de nuevo.`, 'error');
+        Swal.fire('Código promocional inválido', `Por favor, inténtalo de nuevo.`, 'error');
         $("#promo-code").val("");
     }
 }
+
+
 
 // Función para generar un PDF del contenido del carrito
 function generatePDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
 
-    // Generar la fecha y hora actual en el formato especificado
+    // Generar la fecha y hora actual en formato especificado
     const now = new Date();
-    const year = now.getFullYear();
-    const month = String(now.getMonth() + 1).padStart(2, '0'); // Asegurar que el mes tenga dos dígitos
-    const day = String(now.getDate()).padStart(2, '0'); // Asegurar que el día tenga dos dígitos
-    const hours = String(now.getHours()).padStart(2, '0'); // Asegurar que la hora tenga dos dígitos
-    const minutes = String(now.getMinutes()).padStart(2, '0'); // Asegurar que los minutos tengan dos dígitos
-    const seconds = String(now.getSeconds()).padStart(2, '0'); // Asegurar que los segundos tengan dos dígitos
-    const milliseconds = String(now.getMilliseconds()).padStart(3, '0'); // Asegurar que los milisegundos tengan tres dígitos
+    const invoiceNumber = `${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}${String(now.getHours()).padStart(2, '0')}${String(now.getMinutes()).padStart(2, '0')}${String(now.getSeconds()).padStart(2, '0')}`;
 
-    const invoiceNumber = `${year}${month}${day}${hours}${minutes}${seconds}${milliseconds}`;
-
+    // Encabezado
     doc.setFontSize(20);
-    doc.setTextColor(143, 169, 109);
-    doc.setFont("helvetica", "bold"); 
+    doc.setFont("helvetica", "bold");
+    doc.setTextColor(143, 169, 109); // Verde suave
     doc.text("Factura de Compra", 105, 20, null, null, 'center');
-    doc.setTextColor(0, 0, 0); 
-    doc.setFont("helvetica", "normal"); 
+    
     doc.setFontSize(12);
+    doc.setTextColor(0, 0, 0); // Negro
+    doc.setFont("helvetica", "normal");
+    doc.text(`Factura Número: ${invoiceNumber}`, 105, 30, null, null, 'center');
+    
+    const customerNameDisplay = customerName.trim() === "" ? "*Sin Nombre*" : customerName;
+    doc.text(`Nombre del Cliente: ${customerNameDisplay}`, 14, 40);
 
-    // Agregar el número de factura
-    doc.text(`Factura Número: ${invoiceNumber}`, 105, 30, null, null, 'center'); 
-    const customerNameDisplay = customerName.trim() == "" ? "*Sin Nombre*" : customerName;
-
-    doc.text(`Nombre del Cliente: ${customerNameDisplay}`, 14, 40); 
-
-    let y = 45; 
-    let total = 0;
-
-    // Definir el ancho de la tabla y la altura de las filas
+    // Tabla: Configuración inicial
+    let y = 50;
     const tableWidth = 180;
     const rowHeight = 10;
+    const colWidths = [70, 30, 30, 50]; // Ancho de columnas: Producto, Precio, Cantidad, Subtotal
 
     // Cabecera de la tabla
-    doc.setFillColor(143, 169, 109);
+    doc.setFillColor(143, 169, 109); // Verde claro
     doc.rect(14, y, tableWidth, rowHeight, 'F'); // Fondo de la cabecera
     doc.setTextColor(255, 255, 255); // Texto blanco
-    doc.text("Producto", 15, y + 7);
-    doc.text("Precio", 80, y + 7);
+    doc.setFont("helvetica", "bold");
+    doc.text("Producto", 16, y + 7);
+    doc.text("Precio", 90, y + 7);
     doc.text("Cantidad", 120, y + 7);
-    doc.text("Subtotal", 150, y + 7);
-    doc.setTextColor(0, 0, 0);
+    doc.text("Subtotal", 160, y + 7);
     y += rowHeight;
-    const maxWidth = 180;
 
-    const totalFromDOM = parseFloat($("#total-price").text());
-    // Detalles de los productos
-    cart.forEach(item => {
+    // Datos de la tabla
+    doc.setFont("helvetica", "normal");
+    doc.setTextColor(0, 0, 0); // Negro
+    let total = 0;
+
+    
+    cart.forEach((item, index) => {
         const subtotal = item.price * item.quantity;
-        doc.rect(14, y, tableWidth, rowHeight); // Bordes de la fila
-        doc.text(item.name, 15, y + 7);
-        doc.text(`$${item.price.toFixed(2)}`, 80, y + 7);
-        doc.text(item.quantity.toString(), 120, y + 7);
-        doc.text(`$${subtotal.toFixed(2)}`, 150, y + 7);
-        y += rowHeight; // Incremento para la siguiente línea
-        total= totalFromDOM;
+
+        // Alternar color de fondo para filas
+        if (index % 2 === 0) {
+            doc.setFillColor(245, 245, 245); // Gris claro
+            doc.rect(14, y, tableWidth, rowHeight, 'F');
+        }
+
+        // Añadir datos del producto
+        doc.text(item.name, 16, y + 7);
+        doc.text(`$${item.price.toFixed(2)}`, 90, y + 7);
+        doc.text(`${item.quantity}`, 125, y + 7);
+        doc.text(`$${subtotal.toFixed(2)}`, 165, y + 7);
+
+        y += rowHeight; // Mover a la siguiente fila
+        total += subtotal; // Sumar al total
     });
 
+
+    if(discountApplied){
     // Total
-    doc.setFillColor(211, 211, 211); 
-    doc.rect(14, y, tableWidth, rowHeight, 'F'); 
+    y += 5; // Espaciado antes del total
+    doc.setFont("helvetica", "bold");
+    doc.setFillColor(211, 211, 211); // Fondo gris claro para total
+    doc.rect(14, y, tableWidth, rowHeight, 'F');
     doc.setTextColor(0, 0, 0);
-    doc.text("Total:", 15, y + 7);
-    doc.text(`$${total.toFixed(2)}`, 150, y + 7);
-
-    // Información adicional (pie de página)
-    y += rowHeight + 5;
-    doc.setFontSize(10);
-    doc.setTextColor(128, 128, 128);
-    doc.text("Gracias por elegir nuestros servicios. ¡Esperamos verte pronto!", 14, y);
-
-    // Agregar número de página
-    const pageCount = doc.internal.getNumberOfPages();
-    for (let i = 1; i <= pageCount; i++) {
-        doc.setPage(i); // Establecer la página actual
-        doc.text(`Página ${i} de ${pageCount}`, 190, 285, null, null, 'right'); // Añadir número de página
+    doc.text("Total con un 10% descuento aplicado:", 16, y + 7);
+    doc.text(`$${discountedTotal.toFixed(2)}`, 165, y + 7);
+    }else
+    {
+        y += 5; // Espaciado antes del total
+        doc.setFont("helvetica", "bold");
+        doc.setFillColor(211, 211, 211); // Fondo gris claro para total
+        doc.rect(14, y, tableWidth, rowHeight, 'F');
+        doc.setTextColor(0, 0, 0);
+        doc.text("Total", 16, y + 7);
+        doc.text(`$${total.toFixed(2)}`, 165, y + 7);
     }
 
+    // Mensaje de pie de página
+    y += rowHeight + 10;
+    doc.setFontSize(10);
+    doc.setTextColor(128, 128, 128); // Gris oscuro
+    doc.text("Gracias por elegir nuestros servicios. ¡Esperamos que sigas viajando con nosotros!", 105, y, null, null, 'center');
 
+    // Número de página
+    const pageCount = doc.internal.getNumberOfPages();
+    for (let i = 1; i <= pageCount; i++) {
+        doc.setPage(i);
+        doc.setFontSize(10);
+        doc.text(`Página ${i} de ${pageCount}`, 190, 285, null, null, 'right');
+    }
+
+    // Guardar PDF
     doc.save('factura_compra.pdf');
 }
 
