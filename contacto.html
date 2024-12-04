@@ -138,74 +138,94 @@
           <label for="correo" class="form-label">Correo Electrónico:</label>
           <input type="email" id="correo" name="correo" class="form-control" placeholder="example@dominio.com" required>
         </div>
-        <div class="mb-3">
-          <label for="telefono" class="form-label">Teléfono:</label>
-          <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="+506 85282137" required>
-        </div>
-        <div class="mb-3">
-          <label for="tipo-consulta" class="form-label">Tipo de Consulta:</label>
-          <select id="tipo-consulta" name="tipo-consulta" class="form-select" required>
-            <option value="">Selecciona...</option>
-            <option value="info">Información sobre viajes</option>
-            <option value="reservas">Reservas</option>
-            <option value="soporte">Soporte</option>
-            <option value="otro">Otro</option>
-          </select>
-        </div>
-        <div class="mb-3">
-          <label for="mensaje" class="form-label">Mensaje:</label>
-          <textarea id="mensaje" name="mensaje" class="form-control" rows="4" placeholder="Escribe un mensaje"
-            required></textarea>
-        </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" id="suscripcion" name="suscripcion" class="form-check-input">
-          <label for="suscripcion" class="form-check-label">Deseo recibir noticias y promociones.</label>
-        </div>
-        <button type="button" id="btnEnviar" class="btn btn-primary">Enviar</button>
-      </form>
-    </section>
+        <section>
+          <form id="contactForm">
+            <div class="mb-3">
+              <label for="telefono" class="form-label">Teléfono:</label>
+              <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="85282137" maxlength="8"
+                required>
+            </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-      document.getElementById('btnEnviar').addEventListener('click', function () {
-        const form = document.getElementById('contactForm');
-        const inputs = form.querySelectorAll('input, textarea, select');
-        let allFilled = true;
+            <div class="mb-3">
+              <label for="tipo-consulta" class="form-label">Tipo de Consulta:</label>
+              <select id="tipo-consulta" name="tipo-consulta" class="form-select" required>
+                <option value="">Selecciona...</option>
+                <option value="info">Información sobre viajes</option>
+                <option value="reservas">Reservas</option>
+                <option value="soporte">Soporte</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
 
-        // Validar si todos los campos requeridos están llenos
-        inputs.forEach(input => {
-          if (!input.value.trim()) {
-            allFilled = false;
-          }
-        });
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje:</label>
+              <textarea id="mensaje" name="mensaje" class="form-control" rows="4" placeholder="Escribe un mensaje"
+                required></textarea>
+            </div>
 
-        if (allFilled) {
-          // Mostrar alerta de éxito
-          Swal.fire({
-            title: '¡Formulario completo!',
-            text: 'Gracias por completar el formulario.',
-            icon: 'success',
-            confirmButtonText: 'Aceptar'
-          }).then(() => {
-            // Limpiar campos del formulario
-            form.reset();
+            <div class="mb-3 form-check">
+              <input type="checkbox" id="suscripcion" name="suscripcion" class="form-check-input">
+              <label for="suscripcion" class="form-check-label">Deseo recibir noticias y promociones.</label>
+            </div>
+
+            <button type="button" id="btnEnviar" class="btn btn-primary">Enviar</button>
+          </form>
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+          // Validar solo números en tiempo real
+          document.getElementById('telefono').addEventListener('input', function (e) {
+            const telefono = e.target;
+            telefono.value = telefono.value.replace(/[^0-9]/g, ''); // Solo permite números
+            if (telefono.value.length > 8) {
+              telefono.value = telefono.value.slice(0, 8); // Limita a 8 caracteres
+            }
           });
-        } else {
-          // Mostrar alerta de error
-          Swal.fire({
-            title: 'Error',
-            text: 'Por favor, completa todos los campos del formulario.',
-            icon: 'error',
-            confirmButtonText: 'Revisar'
-          });
-        }
-      });
-    </script>
 
-    <div class="map-container" id="mapa">
-      <h2 class="subtitulo">Nuestra ubicación</h2>
-      <div id="map"></div>
-    </div>
+          // Validar y enviar el formulario
+          document.getElementById('btnEnviar').addEventListener('click', function () {
+            const telefono = document.getElementById('telefono').value.trim();
+            const tipoConsulta = document.getElementById('tipo-consulta').value.trim();
+            const mensaje = document.getElementById('mensaje').value.trim();
+
+            if (telefono.length !== 8) {
+              Swal.fire({
+                title: 'Error',
+                text: 'El número de teléfono debe tener exactamente 8 dígitos.',
+                icon: 'error',
+                confirmButtonText: 'Revisar'
+              });
+              return;
+            }
+
+            if (!tipoConsulta || !mensaje) {
+              Swal.fire({
+                title: 'Error',
+                text: 'Por favor, completa todos los campos del formulario.',
+                icon: 'error',
+                confirmButtonText: 'Revisar'
+              });
+              return;
+            }
+
+            Swal.fire({
+              title: '¡Formulario enviado!',
+              text: 'Gracias por contactarnos.',
+              icon: 'success',
+              confirmButtonText: 'Aceptar'
+            }).then(() => {
+              // Limpiar el formulario
+              document.getElementById('contactForm').reset();
+            });
+          });
+        </script>
+
+
+        <div class="map-container" id="mapa">
+          <h2 class="subtitulo">Nuestra ubicación</h2>
+          <div id="map"></div>
+        </div>
 
 
   </main>
